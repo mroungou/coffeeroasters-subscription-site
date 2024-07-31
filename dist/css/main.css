@@ -1,1 +1,143 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: rgb(254, 253, 247);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin: 2rem 1.5rem;
+}
+.header .menu-btn {
+  margin-left: auto;
+}
+
+.ad {
+  margin: 1rem 1.5rem;
+  border-radius: 10px;
+  padding: 6rem 1.5rem;
+  background-image: url("/assets/home/mobile/image-hero-coffeepress.jpg");
+  text-align: center;
+  color: rgb(254, 252, 247);
+}
+.ad h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.ad p {
+  font-size: 0.938rem;
+  font-weight: 200;
+  line-height: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.ad .create-plan-btn {
+  background-color: rgb(14, 135, 132);
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+  font-size: 1.125rem;
+  padding: 1rem;
+  width: 78%;
+  margin: 2rem auto 0;
+}
+
+.collection {
+  text-align: center;
+}
+.collection .h2 {
+  display: grid;
+  padding: 0.9rem 0;
+}
+.collection .h2:after {
+  content: "";
+  background-image: linear-gradient(rgba(254, 252, 247, 0.0001), rgb(254, 252, 247));
+  grid-area: 1/-1;
+}
+.collection .coffees {
+  display: grid;
+  row-gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.collection h2 {
+  text-transform: lowercase;
+  grid-area: 1/-1;
+  color: rgb(131, 136, 143);
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+.collection h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: rgb(51, 61, 75);
+  line-height: 140%;
+}
+.collection p {
+  color: rgb(51, 61, 75);
+  font-size: 0.938rem;
+  line-height: 150%;
+  width: 75%;
+  margin: 0 auto;
+}
+.collection img {
+  width: 55%;
+}
+
+.why-us {
+  background: rgb(44, 52, 62);
+  color: rgb(254, 252, 247);
+  text-align: center;
+  line-height: 170%;
+  margin: 0 1.5rem;
+  padding: 4rem 1.5rem 4rem;
+  border-radius: 10px;
+}
+.why-us p {
+  font-size: 0.938rem;
+  font-weight: 300;
+}
+.why-us h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.why-us h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+.why-us img {
+  margin-top: 2.125rem;
+  margin-bottom: 1rem;
+}
+.why-us .benefits {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.why-us .best-quality,
+.why-us .exclusive-benefits,
+.why-us .free-shipping {
+  background-color: rgb(14, 135, 132);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+.why-us .best-quality p,
+.why-us .exclusive-benefits p,
+.why-us .free-shipping p {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+.why-us .free-shipping h3 {
+  margin-top: 3.379rem;
+}/*# sourceMappingURL=main.css.map */

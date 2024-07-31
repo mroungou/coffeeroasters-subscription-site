@@ -1,0 +1,151 @@
+@use 'variables';
+@use 'fonts';
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    background-color: rgba(254, 253, 247, 1);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fraunces", serif;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin: 2rem 1.5rem;
+    .menu-btn {
+        margin-left: auto;
+    }
+}
+
+.ad {
+    margin: 1rem 1.5rem;
+    border-radius: 10px;
+    padding: 6rem 1.5rem;
+    background-image: url('/assets/home/mobile/image-hero-coffeepress.jpg');
+    text-align: center;
+    color: rgba(254, 252, 247, 1);
+    h1 {
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: .938rem;
+        font-weight: 200;
+        line-height: 150%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .create-plan-btn {
+        background-color: rgba(14, 135, 132, 1);
+        font-weight: 900;
+        font-family: "Fraunces", serif;
+        font-size: 1.125rem;
+        padding: 1rem;
+        width: 78%;
+        margin: 2rem auto 0;
+    }
+}
+
+.collection {
+    text-align: center;
+    .h2 {
+        display: grid;
+        padding: .9rem 0;
+        &:after {
+            content: "";
+            background-image: linear-gradient(rgba(254, 252, 247, 0.0001), rgba(254, 252, 247, 1));
+            grid-area: 1/-1;
+        }
+    }
+
+    .coffees {
+        display: grid;
+        row-gap: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    h2 {
+        text-transform: lowercase;
+        grid-area: 1/-1;
+        color: rgba(131, 136, 143, 1);
+        font-weight: 900;
+        font-size: 2.5rem;
+        line-height: 110%;
+    }
+
+    h3 {
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: rgba(51, 61, 75, 1);
+        line-height: 140%;
+    }
+
+    p {
+        color: rgba(51, 61, 75, 1);
+        font-size: .938rem;
+        line-height: 150%;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 55%;
+    }
+}
+
+.why-us {
+    background: rgba(44, 52, 62, 1);
+    color: rgba(254, 252, 247, 1);
+    text-align: center;
+    line-height: 170%;
+    margin: 0 1.5rem;
+    padding: 4rem 1.5rem 4rem;
+    border-radius: 10px;
+    p {
+        font-size: .938rem;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+    
+    h3 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    img {
+        margin-top: 2.125rem;
+        margin-bottom: 1rem;
+    }
+    .benefits {
+        display: grid;
+        row-gap: 1.5rem;
+    }
+    .best-quality,
+    .exclusive-benefits,
+    .free-shipping {
+        background-color: rgba(14, 135, 132, 1);
+        padding: 2rem 1rem;
+        border-radius: 8px;
+        p {
+            width: 80%;
+            margin: 1.5rem auto;
+        }
+    }
+
+    .free-shipping h3{
+        margin-top: 3.379rem;
+    }
+}
