@@ -19,12 +19,41 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin: 2rem 1.5rem;
 }
-.header .menu-btn {
+.header .menu-toggle-btn {
   margin-left: auto;
+}
+.header .menu-toggle-btn #close-btn {
+  display: none;
+}
+
+.overlay {
+  grid-area: 1/-1;
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  background: linear-gradient(rgb(254, 252, 247), rgba(254, 252, 247, 0.8));
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay .nav {
+  display: grid;
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  row-gap: 2rem;
+  position: relative;
+  top: 5%;
+  width: 100%;
+}
+.overlay .nav a, .overlay .nav a:visited {
+  text-decoration: none;
+  color: rgb(51, 61, 75);
 }
 
 .ad {
-  margin: 1rem 1.5rem;
+  margin: 2.5rem 1.5rem 1rem;
   border-radius: 10px;
   padding: 6rem 1.5rem;
   background-image: url("/assets/home/mobile/image-hero-coffeepress.jpg");
@@ -96,34 +125,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .why-us {
-  background: rgb(44, 52, 62);
   color: rgb(254, 252, 247);
   text-align: center;
   line-height: 170%;
   margin: 0 1.5rem;
-  padding: 4rem 1.5rem 4rem;
   border-radius: 10px;
 }
-.why-us p {
-  font-size: 0.938rem;
-  font-weight: 300;
+.why-us .benefits-listed {
+  display: grid;
+  row-gap: 1rem;
+  margin: 0 1.5rem;
+  margin-top: 20rem;
 }
-.why-us h2 {
-  font-size: 1.75rem;
-  font-weight: 900;
-  margin-bottom: 2rem;
+.why-us .benefits-bg img {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
 }
-.why-us h3 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
-.why-us img {
+.why-us .benefits-listed img {
   margin-top: 2.125rem;
   margin-bottom: 1rem;
-}
-.why-us .benefits {
-  display: grid;
-  row-gap: 1.5rem;
 }
 .why-us .best-quality,
 .why-us .exclusive-benefits,
@@ -140,4 +161,104 @@ h1, h2, h3, h4, h5, h6 {
 }
 .why-us .free-shipping h3 {
   margin-top: 3.379rem;
+}
+.why-us p {
+  font-size: 0.938rem;
+  font-weight: 300;
+}
+.why-us h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.why-us h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.ad-text {
+  padding: 4rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+  z-index: 1;
+}
+
+.benefits {
+  border-radius: 10px;
+  display: grid;
+}
+.benefits .benefits-bg,
+.benefits .benefits-listed, .benefits .ad-text {
+  grid-area: 1/2;
+}
+
+.how {
+  text-align: center;
+  margin: 6rem 1.5rem 0;
+  display: grid;
+  row-gap: 3rem;
+}
+.how h2 {
+  font-size: 1.5rem;
+  color: rgb(131, 136, 143);
+  margin: 1rem;
+}
+.how .step h3 {
+  color: rgb(51, 61, 75);
+  font-size: 1.75rem;
+  margin: 1.5rem 0;
+}
+.how .step p {
+  color: rgb(51, 61, 75);
+  font-size: 0.938rem;
+  line-height: 160%;
+  width: 95%;
+}
+.how .step-number {
+  color: rgb(253, 214, 186);
+  font-size: 4.5rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+.how .step3 p {
+  width: 96%;
+}
+.how .create-plan {
+  background-color: rgb(14, 135, 132);
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+  font-size: 1.125rem;
+  padding: 1rem;
+  width: 78%;
+  margin: 2rem auto 0;
+  color: rgb(254, 252, 247);
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(44, 52, 62);
+  margin: 8rem 1.5rem 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.footer .nav {
+  margin-top: 3.25rem;
+  display: grid;
+  row-gap: 1.5rem;
+}
+.footer .nav a, .footer .nav a:visited {
+  color: rgb(131, 136, 143);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.92px;
+  font-size: 0.75rem;
+}
+.footer .social {
+  align-items: center;
+  margin-top: 3.25rem;
+}
+.footer .social * {
+  display: inline-block;
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
 }/*# sourceMappingURL=main.css.map */

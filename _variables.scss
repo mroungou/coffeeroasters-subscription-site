@@ -1,0 +1,9 @@
+@mixin createBtn {
+    background-color: rgba(14, 135, 132, 1);
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+    font-size: 1.125rem;
+    padding: 1rem;
+    width: 78%;
+    margin: 2rem auto 0;
+}
