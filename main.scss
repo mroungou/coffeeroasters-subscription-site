@@ -73,11 +73,11 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1rem;
     }
 
-    .create-plan-btn {
-        @include variables.createBtn
-    }
 }
 
+.create-plan-btn {
+    @include variables.createBtn
+}
 .collection {
     text-align: center;
     .h2 {
@@ -234,9 +234,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 
-    .create-plan {
+    .create-plan-btn {
         @include variables.createBtn;
-        color: rgba(254, 252, 247, 1);
     }
 }
 
@@ -269,4 +268,262 @@ h1, h2, h3, h4, h5, h6 {
             margin-right: .35rem;
         }
     }
+}
+
+.about-us {
+    background: url("/assets/about/mobile/image-hero-whitecup.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 10px;
+    color: rgba(254, 252, 247, 1);
+    margin: 2.5rem 1.5rem 0;
+    padding: 6.25rem 1.5rem;
+    display: grid;
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: .938rem;
+        line-height: 160%;
+        font-weight: 300;
+    }
+}
+
+.commitment {
+    margin: 6rem 1.5rem;
+    text-align: center;
+    color: rgba(51, 61, 75, 1);
+    .text {
+        margin-top: 2rem;
+    }
+    h2 {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 1.875rem;
+    }
+    p {
+        line-height: 160%;
+        font-size: .938rem;
+    }
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.quality {
+    display: grid;
+    margin-top: 10rem;
+    .quality-coffee {
+        margin: -4.5rem 3rem 0;
+        z-index: 1;
+        img {
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .qa, .quality-coffee {
+        grid-area: 1/-1;
+    }
+}
+
+
+.qa {
+    display: grid;
+    color: rgba(254, 252, 247, 1);
+    text-align: center;
+    .text {
+        margin: 8rem 1.5rem 0;
+        padding: 0 1.5rem;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: .938rem;
+        line-height: 160%;
+        font-weight: 300;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .bg, 
+    .text {
+        grid-area: 1/-1;
+    }
+}
+
+.hq {
+    margin: 6rem 1.5rem 0;
+    text-align: center;
+    h3 {
+        color: rgba(131, 136, 143, 1);
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+        color: rgba(51, 61, 75, 1);
+        font-weight: 900;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .countries {
+        margin-top: 4rem;
+        display: grid;
+        row-gap: 4rem;
+    }
+    .street, 
+    .city, 
+    .postal, 
+    .number {
+        display: block;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        color: rgba(51, 61, 75, 1);
+    }
+}
+
+.create-plan {
+    margin: 2.5rem 1.5rem;
+    background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg');
+    background-size: cover;
+    text-align: center;
+    color: rgba(254, 252, 247, 1);
+    padding: 6rem 1.5rem 9rem;
+    border-radius: 10px;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 1.25rem;
+    }
+    p {
+        font-weight: 300;
+        font-size: .938rem;
+        line-height: 160%;
+    }
+}
+
+.steps {
+    background: rgba(44, 52, 62, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 5rem 1.25rem;
+    display: grid;
+    row-gap: 3rem;
+    .step-number {
+        color: rgba(253, 214, 186, 1);
+        font-weight: 900;
+        font-size: 4.5rem;
+        font-family: "Fraunces", serif;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        line-height: 170%;
+        font-weight: 300;
+        font-size: .938rem;
+    }
+}
+
+.how-drink, 
+.quantity, 
+.type, 
+.grind, 
+.frequency {
+    margin: 6rem 1.5rem;
+    .heading {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        margin-bottom: 2rem;
+        img {
+            margin-left: auto;
+            transform: rotate(180deg);
+        }
+    }
+    h4 {
+        color: rgba(131, 136, 143, 1);
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        color: rgba(51, 61, 75, 1);
+        font-weight: 900;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-weight: 400;
+        color: rgba(51, 61, 75, 1);
+        line-height: 160%;
+        font-size: 1rem;
+    }
+}
+
+.options {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form-control {
+    background-color: rgba(244, 241, 235, 1);
+    padding: 1.65rem 1.5rem;
+    border-radius: 8px;
+}
+
+.form-control input {
+    display: none;
+}
+
+.checked {
+    background-color: rgba(14, 135, 132, 1);
+    p, h5 {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.summary {
+    margin: 6rem 1.5rem 0;
+    padding: 1.5rem;
+    background-color: rgba(44, 52, 62, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    #order-summary-header {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 300;
+        display: block;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-family: "Fraunces", serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 165%;
+    }
+
+    .opt-tkn {
+        color: rgba(14, 135, 132, 1);
+    }
+}
+.summary-div .create-plan-btn {
+    width: 60%;
 }

@@ -3,118 +3,234 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <script src="./index.js" defer></script>
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  Home
-  About us
-  Create your plan
-
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
-
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
-  
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
-
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
-
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
-
-  <!-- Modal -->
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
-  <!-- End modal -->
-
-  Home
-  About us
-  Create your plan
+  <main>
+    <section class="header">
+        <div class="logo"><img src="./assets/shared/desktop/logo.svg" alt="Coffeeroasters"></div>
+        <div class="menu-toggle-btn mobile" id="menu-btn">
+            <img class="menu" id="menu" onclick="openNav()" src="./assets/shared/mobile/icon-hamburger.svg" alt="Menu">
+            <img class="close-btn" id="close-btn" onclick="closeNav()" src="./assets/shared/mobile/icon-close.svg" alt="Close Button">
+        </div>
+    </section>
+    <div class="overlay mobile" id="overlay">
+        <div class="nav">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About us</a>
+            <a href="./plan.html">Create your plan</a>
+        </div>
+    </div>
+    <section class="create-plan">
+        <h1>Create a plan</h1>
+        <p>
+            Build a subscription plan that best fits your needs. We offer an assortment of the best
+            artisan coffees from around the globe delivered fresh to your door.
+        </p>
+    </section>
+    <section class="steps">
+        <div class="step step1">
+            <span class="step-number">01</span>
+            <h3>Pick your coffee</h3>
+            <p>
+                Select from our evolving range of artisan coffees. Our beans are ethically
+                sourced and we pay fair prices for them. There are new coffees in all profiles
+                every month for you to try out.
+            </p>
+        </div>
+        <div class="step step2">
+            <span class="step-number">02</span>
+            <h3>Choose the frequency</h3>
+            <p>
+                Customize your order frequency, quantity, even your roast style and grind type.
+                Pause, skip or cancel your subscription with no commitment through our online portal.
+            </p>
+        </div>
+        <div class="step step3">
+        <span class="step-number">03</span>
+            <h3>Receive and enjoy!</h3>
+            <p>
+                We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+                world-class coffees curated to provide a distinct tasting experience.
+            </p>
+        </div>
+    </section>
+    <!-- 01 Preferences
+    02 Bean type
+    03 Quantity
+    04 Grind option
+    05 Deliveries -->
+    <section class="how-drink">
+        <div class="options-how heading">
+            <h4>How do you drink your coffee?</h4>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+        </div>
+        <div class="options">
+            <label for="" class="form-control">
+                <input type="checkbox" name="how" value="capsule">
+                    <h5>Capsule</h5>
+                    <p class="description">Compatible with Nespresso systems and similar brewers</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" name="how" value="filter">
+                    <h5>Filter</h5>
+                    <p class="description">For pour over or drip methods like Aeropress, Chemex, and V60</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="expresso" name="how">
+                    <h5>Espresso</h5>
+                    <p class="description">Dense and finely ground beans for an intense, flavorful experience</p>
+                </input>
+            </label>
+        </div>
+    </section>
+    <section class="type">
+        <div class="options-type heading">
+            <h4>What type of coffee?</h4>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+        </div>
+        <div class="options">
+            <label for="" class="form-control">
+                <input type="checkbox" value="single" name="type">
+                    <h5>Single origin</h5>
+                    <p class="description">Distinct, high quality coffee from a specific family-owned farm</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="decaf" name="type">
+                    <h5>Decaf</h5>
+                    <p class="decription">Just like regular coffee, except the caffeine has been removed</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="blended" name="type">
+                    <h5>Blended</h5>
+                    <p class="description">Combination of two or three dark roasted beans of organic coffees</p>
+                </input>
+            </label>
+        </div>
+    </section>
+    <section class="quantity">
+        <div class="options-quantity heading">
+            <h4>How much would you like?</h4>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+        </div>
+        <div class="options">
+            <label for="" class="form-control">
+                <input type="checkbox" name="quantity" value="250">
+                    <h5>250g</h5>
+                    <p class="description">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="500" name="quantity">
+                    <h5>500g</h5>
+                    <p class="description">Perfect option for a couple. Yields about 40 delectable cups.</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="1000" name="quantity">
+                    <h5>1000g</h5>
+                    <p class="description">Perfect for offices and events. Yields about 90 delightful cups.</p>
+                </input>
+            </label>
+        </div>
+    </section>
+    <section class="grind">
+        <div class="options-grind heading">
+            <h4>Want us to grind them?</h4>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+        </div>
+        <div class="options">
+            <label for="" class="form-control">
+                <input type="checkbox" name="grind" value="wholebean">
+                    <h5>Wholebean</h5>
+                    <p class="description">Best choice if you cherish the full sensory experience</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="filter" name="grind">
+                    <h5>Filter</h5>
+                    <p class="description">For drip or pour-over coffee methods such as V60 or Aeropress</p>
+                </input>
+            </label>
+            <form action="" class="form-control">
+                <input type="checkbox" value="cafetiére" name="grind">
+                    <h5>Cafetiére</h5>
+                    <p class="description">Course ground beans specially suited for french press coffee</p>
+                </input>
+            </form>
+        </div>
+    </section>
+    <section class="frequency">
+        <div class="options-freq heading">
+            <h4>How often should we deliver?</h4>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+        </div>
+        <div class="options">
+            <label for="" class="form-control">
+                <input type="checkbox" value="week" name="frequency">
+                    <h5>Every week</h5>
+                    <p class="description">$14.00 per shipment. Includes free first-class shipping.</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="2 weeks" name="frequency">
+                    <h5>Every 2 weeks</h5>
+                    <p class="description">$17.25 per shipment. Includes free priority shipping.</p>
+                </input>
+            </label>
+            <label for="" class="form-control">
+                <input type="checkbox" value="month" name="frequency">
+                    <h5>Every month</h5>
+                    <p class="description">$22.50 per shipment. Includes free priority shipping.</p>
+                </input>
+            </label>
+        </div>
+    </section>
+    <section class="summary-div">
+        <div class="summary">
+            <span id="order-summary-header">Order Summary</span>
+            <p>
+                “I drink coffee <span class="opt-tkn" id="coffee">_____</span>,
+                with a<span class="opt-tkn" id="type"> _____</span> type of bean.
+                <span class="opt-tkn id="quantity">_____</span> ground ala
+                <span class="opt-tkn" id="grind">_____</span>,
+                sent to me <span class="opt-tkn" id="frequency">_____</span>.”
+            </p>
+        </div>
+        <div class="create-plan-btn"><a href="">Create my plan!</a></div>
+    </section>
+    <!-- Modal -->
+    <dialog class="order-summary" id="order-summary">
+        Order Summary
+        “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+        sent to me _____.”
+        Is this correct? You can proceed to checkout or go back to plan selection if something
+        is off. Subscription discount codes can also be redeemed at the checkout.
+        $_____/month
+        Checkout
+    </dialog>
+    <!-- End modal -->
+    <footer class="footer">
+        <img src="./assets/shared/desktop/footer-logo.svg" alt="Coffeeroasters Logo">
+        <div class="nav">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About us</a>
+            <a href="./plan.html">Create your plan</a>
+        </div>
+        <div class="social">
+            <div class="facebook"><img src="./assets/shared/desktop/icon-facebook.svg" alt="facebook"></div>
+            <div class="twitter"><img src="./assets/shared/desktop/icon-twitter.svg" alt="twitter"></div>
+            <div class="instagram"><img src="./assets/shared/desktop/icon-instagram.svg" alt="instagram"></div>
+        </div>
+    </footer>
+  </main>
 </body>
 
 </html>

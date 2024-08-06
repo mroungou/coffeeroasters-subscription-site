@@ -71,7 +71,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-.ad .create-plan-btn {
+
+.create-plan-btn {
   background-color: rgb(14, 135, 132);
   font-weight: 900;
   font-family: "Fraunces", serif;
@@ -79,6 +80,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem;
   width: 78%;
   margin: 2rem auto 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.create-plan-btn a, .create-plan-btn a:visited {
+  text-decoration: none;
+  color: rgb(254, 252, 247);
 }
 
 .collection {
@@ -222,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 .how .step3 p {
   width: 96%;
 }
-.how .create-plan {
+.how .create-plan-btn {
   background-color: rgb(14, 135, 132);
   font-weight: 900;
   font-family: "Fraunces", serif;
@@ -230,6 +237,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem;
   width: 78%;
   margin: 2rem auto 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.how .create-plan-btn a, .how .create-plan-btn a:visited {
+  text-decoration: none;
   color: rgb(254, 252, 247);
 }
 
@@ -261,4 +273,276 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-left: 0.35rem;
   margin-right: 0.35rem;
+}
+
+.about-us {
+  background: url("/assets/about/mobile/image-hero-whitecup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 10px;
+  color: rgb(254, 252, 247);
+  margin: 2.5rem 1.5rem 0;
+  padding: 6.25rem 1.5rem;
+  display: grid;
+}
+.about-us h1 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.about-us p {
+  font-size: 0.938rem;
+  line-height: 160%;
+  font-weight: 300;
+}
+
+.commitment {
+  margin: 6rem 1.5rem;
+  text-align: center;
+  color: rgb(51, 61, 75);
+}
+.commitment .text {
+  margin-top: 2rem;
+}
+.commitment h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1.875rem;
+}
+.commitment p {
+  line-height: 160%;
+  font-size: 0.938rem;
+}
+.commitment img {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.quality {
+  display: grid;
+  margin-top: 10rem;
+}
+.quality .quality-coffee {
+  margin: -4.5rem 3rem 0;
+  z-index: 1;
+}
+.quality .quality-coffee img {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+}
+.quality .qa, .quality .quality-coffee {
+  grid-area: 1/-1;
+}
+
+.qa {
+  display: grid;
+  color: rgb(254, 252, 247);
+  text-align: center;
+}
+.qa .text {
+  margin: 8rem 1.5rem 0;
+  padding: 0 1.5rem;
+}
+.qa h2 {
+  font-weight: 900;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.qa p {
+  font-size: 0.938rem;
+  line-height: 160%;
+  font-weight: 300;
+}
+.qa img {
+  border-radius: 10px;
+}
+.qa .bg,
+.qa .text {
+  grid-area: 1/-1;
+}
+
+.hq {
+  margin: 6rem 1.5rem 0;
+  text-align: center;
+}
+.hq h3 {
+  color: rgb(131, 136, 143);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.hq h4 {
+  font-size: 1.75rem;
+  color: rgb(51, 61, 75);
+  font-weight: 900;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.hq .countries {
+  margin-top: 4rem;
+  display: grid;
+  row-gap: 4rem;
+}
+.hq .street,
+.hq .city,
+.hq .postal,
+.hq .number {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: rgb(51, 61, 75);
+}
+
+.create-plan {
+  margin: 2.5rem 1.5rem;
+  background-image: url("/assets/plan/mobile/image-hero-blackcup.jpg");
+  background-size: cover;
+  text-align: center;
+  color: rgb(254, 252, 247);
+  padding: 6rem 1.5rem 9rem;
+  border-radius: 10px;
+}
+.create-plan h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+}
+.create-plan p {
+  font-weight: 300;
+  font-size: 0.938rem;
+  line-height: 160%;
+}
+
+.steps {
+  background: rgb(44, 52, 62);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5rem 1.25rem;
+  display: grid;
+  row-gap: 3rem;
+}
+.steps .step-number {
+  color: rgb(253, 214, 186);
+  font-weight: 900;
+  font-size: 4.5rem;
+  font-family: "Fraunces", serif;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.steps h3 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.steps p {
+  line-height: 170%;
+  font-weight: 300;
+  font-size: 0.938rem;
+}
+
+.how-drink,
+.quantity,
+.type,
+.grind,
+.frequency {
+  margin: 6rem 1.5rem;
+}
+.how-drink .heading,
+.quantity .heading,
+.type .heading,
+.grind .heading,
+.frequency .heading {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.how-drink .heading img,
+.quantity .heading img,
+.type .heading img,
+.grind .heading img,
+.frequency .heading img {
+  margin-left: auto;
+  transform: rotate(180deg);
+}
+.how-drink h4,
+.quantity h4,
+.type h4,
+.grind h4,
+.frequency h4 {
+  color: rgb(131, 136, 143);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.how-drink h5,
+.quantity h5,
+.type h5,
+.grind h5,
+.frequency h5 {
+  font-size: 1.5rem;
+  color: rgb(51, 61, 75);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.how-drink p,
+.quantity p,
+.type p,
+.grind p,
+.frequency p {
+  font-weight: 400;
+  color: rgb(51, 61, 75);
+  line-height: 160%;
+  font-size: 1rem;
+}
+
+.options {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.form-control {
+  background-color: rgb(244, 241, 235);
+  padding: 1.65rem 1.5rem;
+  border-radius: 8px;
+}
+
+.form-control input {
+  display: none;
+}
+
+.checked {
+  background-color: rgb(14, 135, 132);
+}
+.checked p, .checked h5 {
+  color: rgb(255, 255, 255);
+}
+
+.summary {
+  margin: 6rem 1.5rem 0;
+  padding: 1.5rem;
+  background-color: rgb(44, 52, 62);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.summary #order-summary-header {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.summary p {
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 165%;
+}
+.summary .opt-tkn {
+  color: rgb(14, 135, 132);
+}
+
+.summary-div .create-plan-btn {
+  width: 60%;
 }/*# sourceMappingURL=main.css.map */
