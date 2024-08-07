@@ -9,6 +9,7 @@
 body {
     font-family: "Barlow", sans-serif;
     background-color: rgba(254, 253, 247, 1);
+    margin-top: 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Fraunces", serif;
@@ -28,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .overlay {
-    grid-area: 1/-1;
     height: 100%;
     width: 0%;
     position: fixed;
@@ -455,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 2rem;
         img {
             margin-left: auto;
-            transform: rotate(180deg);
+            // transform: rotate(180deg);
         }
     }
     h4 {
@@ -479,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .options {
-    display: grid;
+    display: none;
     row-gap: 1rem;
 }
 
@@ -487,18 +487,20 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(244, 241, 235, 1);
     padding: 1.65rem 1.5rem;
     border-radius: 8px;
-}
-
-.form-control input {
-    display: none;
-}
-
-.checked {
-    background-color: rgba(14, 135, 132, 1);
-    p, h5 {
-        color: rgba(255, 255, 255, 1);
+    display: grid;
+    input, h5 {
+        grid-area: 1/-1;
     }
 }
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+
 
 .summary {
     margin: 6rem 1.5rem 0;
@@ -522,8 +524,67 @@ h1, h2, h3, h4, h5, h6 {
 
     .opt-tkn {
         color: rgba(14, 135, 132, 1);
+        text-transform: capitalize;
     }
 }
 .summary-div .create-plan-btn {
     width: 60%;
+}
+
+.order-summary {
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: none;
+    margin: 1.5rem;
+    border-radius: 8px;
+    padding: 0;
+    background: rgba(254, 252, 247, 1);
+    padding-bottom: 2rem;
+    .summary-header {
+        background: rgba(51, 61, 75, 1);
+        padding: 1.5rem;
+
+    }
+
+    h6 {
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.75rem;
+        font-weight: 900;
+    }
+
+    span.summary-order {
+        color: rgba(131, 136, 143, 1);
+        font-size: 1.5rem;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        display: block;
+        line-height: 180%;
+    }
+
+    .opt-tkn {
+        color: rgba(14, 135, 132, 1);
+        text-transform: capitalize;
+    }
+
+    p {
+        padding: 1.5rem;
+        line-height: 165%;
+        color: rgba(51, 61, 75, 1);
+        margin-top: 1.5rem;
+    }
+
+    .create-plan-btn {
+        margin: 0 auto;
+    }
+}
+
+.checked {
+    @include variables.checkedOptions;
+}
+
+.hiddenToggle {
+  @include variables.displayOptions;
 }

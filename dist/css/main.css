@@ -7,6 +7,7 @@
 body {
   font-family: "Barlow", sans-serif;
   background-color: rgb(254, 253, 247);
+  margin-top: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .overlay {
-  grid-area: 1/-1;
   height: 100%;
   width: 0%;
   position: fixed;
@@ -465,7 +465,6 @@ h1, h2, h3, h4, h5, h6 {
 .grind .heading img,
 .frequency .heading img {
   margin-left: auto;
-  transform: rotate(180deg);
 }
 .how-drink h4,
 .quantity h4,
@@ -498,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .options {
-  display: grid;
+  display: none;
   row-gap: 1rem;
 }
 
@@ -506,17 +505,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(244, 241, 235);
   padding: 1.65rem 1.5rem;
   border-radius: 8px;
+  display: grid;
+}
+.form-control input, .form-control h5 {
+  grid-area: 1/-1;
 }
 
-.form-control input {
-  display: none;
-}
-
-.checked {
-  background-color: rgb(14, 135, 132);
-}
-.checked p, .checked h5 {
-  color: rgb(255, 255, 255);
+input[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .summary {
@@ -541,8 +541,69 @@ h1, h2, h3, h4, h5, h6 {
 }
 .summary .opt-tkn {
   color: rgb(14, 135, 132);
+  text-transform: capitalize;
 }
 
 .summary-div .create-plan-btn {
   width: 60%;
+}
+
+.order-summary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: none;
+  margin: 1.5rem;
+  border-radius: 8px;
+  padding: 0;
+  background: rgb(254, 252, 247);
+  padding-bottom: 2rem;
+}
+.order-summary .summary-header {
+  background: rgb(51, 61, 75);
+  padding: 1.5rem;
+}
+.order-summary h6 {
+  color: rgb(255, 255, 255);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+.order-summary span.summary-order {
+  color: rgb(131, 136, 143);
+  font-size: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  display: block;
+  line-height: 180%;
+}
+.order-summary .opt-tkn {
+  color: rgb(14, 135, 132);
+  text-transform: capitalize;
+}
+.order-summary p {
+  padding: 1.5rem;
+  line-height: 165%;
+  color: rgb(51, 61, 75);
+  margin-top: 1.5rem;
+}
+.order-summary .create-plan-btn {
+  margin: 0 auto;
+}
+
+.checked {
+  background-color: rgb(14, 135, 132);
+  transition: 0.5s ease-in;
+}
+.checked p, .checked h5 {
+  color: rgb(255, 255, 255);
+}
+
+.hiddenToggle img {
+  transform: rotate(180deg) !important;
+  transition: 0.1s ease-in;
+}
+.hiddenToggle .options {
+  transition: 1s ease-in-out;
+  display: grid;
 }/*# sourceMappingURL=main.css.map */
