@@ -573,7 +573,7 @@ input[type="radio"] {
         padding: 1.5rem;
         line-height: 165%;
         color: rgba(51, 61, 75, 1);
-        margin-top: 1.5rem;
+        // margin-top: 1.5rem;
     }
 
     .create-plan-btn {
@@ -587,4 +587,18 @@ input[type="radio"] {
 
 .hiddenToggle {
   @include variables.displayOptions;
+}
+
+.disabled {
+    h4 {
+        color: rgba(131, 136, 143, 1) !important;
+    }
+
+    h5, p {
+        color: rgba(254, 252, 247, 1);
+    }
+
+    .form-control {
+        background: rgba(226, 222, 219, 1);
+    }
 }

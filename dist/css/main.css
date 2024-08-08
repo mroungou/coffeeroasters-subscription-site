@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2rem auto 0;
   border-radius: 6px;
   text-align: center;
+  color: rgb(254, 252, 247);
 }
 .create-plan-btn a, .create-plan-btn a:visited {
   text-decoration: none;
@@ -239,6 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2rem auto 0;
   border-radius: 6px;
   text-align: center;
+  color: rgb(254, 252, 247);
 }
 .how .create-plan-btn a, .how .create-plan-btn a:visited {
   text-decoration: none;
@@ -585,7 +587,6 @@ input[type=radio] {
   padding: 1.5rem;
   line-height: 165%;
   color: rgb(51, 61, 75);
-  margin-top: 1.5rem;
 }
 .order-summary .create-plan-btn {
   margin: 0 auto;
@@ -606,4 +607,14 @@ input[type=radio] {
 .hiddenToggle .options {
   transition: 1s ease-in-out;
   display: grid;
+}
+
+.disabled h4 {
+  color: rgb(131, 136, 143) !important;
+}
+.disabled h5, .disabled p {
+  color: rgb(254, 252, 247);
+}
+.disabled .form-control {
+  background: rgb(226, 222, 219);
 }/*# sourceMappingURL=main.css.map */

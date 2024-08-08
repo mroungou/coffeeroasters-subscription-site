@@ -141,8 +141,8 @@
             </label>
         </div>
     </section>
-    <section class="grind">
-        <div class="options-grind heading">
+    <section class="grind" id="grind">
+        <div class="options-grind heading" >
             <h4>Want us to grind them?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
@@ -176,19 +176,19 @@
             <label for="week" class="form-control">
                 <input type="radio" id="week" value="week" name="frequency">
                     <h5>Every week</h5>
-                    <p class="description">$14.00 per shipment. Includes free first-class shipping.</p>
+                    <p class="description"><span class="price" id="week-price"></span> per shipment. Includes free first-class shipping.</p>
                 </input>
             </label>
             <label for="2-weeks" class="form-control">
                 <input type="radio" id="2-weeks" value="2 weeks" name="frequency">
                     <h5>Every 2 weeks</h5>
-                    <p class="description">$17.25 per shipment. Includes free priority shipping.</p>
+                    <p class="description"><span class="price" id="2-weeks-price"></span> per shipment. Includes free priority shipping.</p>
                 </input>
             </label>
             <label for="month" class="form-control">
                 <input type="radio" id="month" value="month" name="frequency">
                     <h5>Every month</h5>
-                    <p class="description">$22.50 per shipment. Includes free priority shipping.</p>
+                    <p class="description"><span class="price" id="month-price"></span> per shipment. Includes free priority shipping.</p>
                 </input>
             </label>
         </div>
@@ -196,32 +196,24 @@
     <section class="summary-div">
         <div class="summary">
             <span id="order-summary-header">Order Summary</span>
-            <p>
-                “I drink coffee <span class="opt-tkn" id="coffee">_____</span>,
-                with a <span class="opt-tkn" id="type"> _____</span> type of bean.
-                <span class="opt-tkn" id="quantity">_____</span> ground ala
-                <span class="opt-tkn" id="grind">_____</span>,
-                sent to me <span class="opt-tkn" id="frequency">_____</span>.”
+            <p id="test">
+                
             </p>
         </div>
-        <div class="create-plan-btn"><a href="">Create my plan!</a></div>
+        <div class="create-plan-btn" onclick="openModal()" id="confirm-order">Create my plan!</div>
     </section>
     <!-- Modal -->
     <dialog class="order-summary" id="order-summary">
         <div class="summary-header"><h6>Order Summary</h6></div>
         <p>
-            <span class="summary-order">
-                “I drink coffee <span class="opt-tkn" id="coffee-conf">_____</span>,
-                with a<span class="opt-tkn" id="type-conf"> _____</span> type of bean.
-                <span class="opt-tkn" id="quantity-conf">_____</span> ground ala
-                <span class="opt-tkn" id="grind-conf">_____</span>,
-                sent to me <span class="opt-tkn" id="frequency-conf">_____</span>.”
+            <span class="summary-order" id="summary-modal">
+            
             </span>
             Is this correct? You can proceed to checkout or go back to plan selection if something
             is off. Subscription discount codes can also be redeemed at the checkout.
         </p>
         <div class="create-plan-btn">
-            <a href="">Checkout - <span class="amt-total">$</span>/month</a>
+            Checkout - <span class="amt-total" id="amt-total"></span> / month
         </div>
     </dialog>
     <!-- End modal -->
