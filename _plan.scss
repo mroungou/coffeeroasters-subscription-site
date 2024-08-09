@@ -1,0 +1,255 @@
+.create-plan {
+    margin: 2.5rem 1.5rem;
+    background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg');
+    background-size: cover;
+    text-align: center;
+    color: rgba(254, 252, 247, 1);
+    padding: 6rem 1.5rem 9rem;
+    border-radius: 10px;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 1.25rem;
+    }
+    p {
+        font-weight: 300;
+        font-size: .938rem;
+        line-height: 160%;
+    }
+}
+
+.steps {
+    background: rgba(44, 52, 62, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 5rem 1.25rem;
+    .steps-info {
+        display: grid;
+        row-gap: 3rem;  
+    }
+    .step-number {
+        color: rgba(253, 214, 186, 1);
+        font-weight: 900;
+        font-size: 4.5rem;
+        font-family: "Fraunces", serif;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        line-height: 170%;
+        font-weight: 300;
+        font-size: .938rem;
+    }
+}
+
+.how-drink, 
+.quantity, 
+.type, 
+.grind, 
+.frequency {
+    margin: 6rem 1.5rem;
+    .heading {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+        margin-bottom: 2rem;
+        img {
+            margin-left: auto;
+            // transform: rotate(180deg);
+        }
+    }
+    h4 {
+        color: rgba(131, 136, 143, 1);
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        color: rgba(51, 61, 75, 1);
+        font-weight: 900;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-weight: 400;
+        color: rgba(51, 61, 75, 1);
+        line-height: 160%;
+        font-size: 1rem;
+    }
+}
+
+.options {
+    display: none;
+    row-gap: 1rem;
+}
+
+.form-control {
+    background-color: rgba(244, 241, 235, 1);
+    padding: 2.75rem 1.5rem 4.75rem;
+    border-radius: 8px;
+    display: grid;
+    input, h5 {
+        grid-area: 1/-1;
+    }
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+
+
+.summary {
+    margin: 6rem 1.5rem 0;
+    padding: 1.5rem;
+    background-color: rgba(44, 52, 62, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    #order-summary-header {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 300;
+        display: block;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-family: "Fraunces", serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 165%;
+    }
+
+    .opt-tkn {
+        color: rgba(14, 135, 132, 1);
+        text-transform: capitalize;
+    }
+}
+.summary-div .create-plan-btn {
+    width: 60%;
+}
+
+.order-summary {
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: none;
+    margin: 1.5rem;
+    border-radius: 8px;
+    padding: 0;
+    background: rgba(254, 252, 247, 1);
+    padding-bottom: 2rem;
+    .summary-header {
+        background: rgba(51, 61, 75, 1);
+        padding: 1.5rem;
+
+    }
+
+    h6 {
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.75rem;
+        font-weight: 900;
+    }
+
+    span.summary-order {
+        color: rgba(131, 136, 143, 1);
+        font-size: 1.5rem;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        display: block;
+        line-height: 180%;
+    }
+
+    .opt-tkn {
+        color: rgba(14, 135, 132, 1);
+        text-transform: capitalize;
+    }
+
+    p {
+        margin: 1.5rem;
+        line-height: 165%;
+        color: rgba(51, 61, 75, 1);
+        // margin-top: 1.5rem;
+    }
+
+    .create-plan-btn {
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 86%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .create-plan {
+        margin: 2.5rem 2.5rem 8rem;
+        background-image: url('/assets/plan/tablet/image-hero-blackcup.jpg');
+        text-align: left;
+        padding: 7rem 3rem;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            width: 65%;
+        }
+    }
+
+    .steps {
+        text-align: left;
+        padding: 5rem 2.5rem;
+        .steps-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            // column-gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .step3 p {
+            width: 85%;
+        }
+    }
+
+    .how-drink, 
+    .quantity, 
+    .type, 
+    .grind, 
+    .frequency {
+        margin: 6rem 2.5rem;
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        h5 {
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            width: 98%;
+        }
+
+    }
+
+    .summary {
+        margin: 6rem 2.5rem 0;
+        padding: 1.5rem 3rem;
+    }
+
+    .summary-div .create-plan-btn {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}

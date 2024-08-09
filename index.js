@@ -16,35 +16,15 @@ const frequency = document.getElementsByName('frequency');
 
 
 function updateSummary () {
-    let resultCoffee
-    let resultType 
-    let resultQuantity
-    let resultGrind 
-    let resultFrequency 
+   
+    const resultCoffee = Array.from(coffee).find(option => option.checked)?.value ?? '';
+    const resultType = Array.from(type).find(option => option.checked)?.value ?? '';
+    const resultQuantity = Array.from(quantity).find(option => option.checked)?.value ?? '';
+    const resultGrind = Array.from(grindType).find(option => option.checked)?.value ?? '';
+    const resultFrequency = Array.from(frequency).find(option => option.checked)?.value ?? '';
+    resultCoffee === 'capsule' ? disableGrind() : enableGrind();
 
-    for (const option of coffee) {
-       resultCoffee === 'capsule' ? disableGrind() : enableGrind();
-        // option.checked ? resultCoffee = option.value : null;
-        // resultCoffee = coffee?.find(option => option.checked)?.value ?? ''
-        resultCoffee = Array.from(coffee)?.find(option => option.checked)?.value ?? '';
-    }
-
-    for (const option of type) {
-        resultType = Array.from(type)?.find(option => option.checked)?.value ?? ''
-    }
-    for (const option of quantity) {
-        resultQuantity = Array.from(quantity)?.find(option => option.checked)?.value ??''
-    }
-    for (const option of grindType) {
-        resultGrind = Array.from(grindType)?.find(option => option.checked)?.value ?? ''
-    }
-    for (const option of frequency) {
-        resultFrequency = Array.from(frequency)?.find(option => option.checked)?.value ?? ''
-    }
-
-    const summaryP = document.getElementById('test');
-    const summaryModal = document.getElementById('summary-modal')
-
+   
     updatePrice(resultQuantity, resultFrequency)
 
     const summaryTemplate = `
@@ -56,40 +36,40 @@ function updateSummary () {
     
         `
 
-    summaryP.innerHTML = summaryTemplate;
-    summaryModal.innerHTML = summaryTemplate;
+
+    document.getElementById('test').innerHTML = summaryTemplate;
+    document.getElementById('summary-modal').innerHTML = summaryTemplate;
 }
 
-function updatePrice (quantitySelected, freq) {
-
+function updatePrice(quantitySelected, freq) {
     const prices = {
-        250: { week: 7.20, biWeekly: 9.60, month: 12.90},
-        500: { week: 13, biWeekly: 17.5, month: 22},
-        1000: { week: 22, biWeekly: 32, month: 42}
+        250: { week: 7.20, biWeekly: 9.60, month: 12.90 },
+        500: { week: 13.0, biWeekly: 17.5, month: 22 },
+        1000: { week: 22.0, biWeekly: 32.0, month: 42.0 }
+    };
+
+    const selectedPrice = prices[quantitySelected];
+    if (!selectedPrice) {
+        console.error(`No price found for quantity: ${quantitySelected}`);
+        return;
     }
-    const weekPrice = document.getElementById('week-price')
-    const biWeeklyPrice = document.getElementById('2-weeks-price');
-    const monthPrice = document.getElementById('month-price');
-    const monthlyCostModal = document.getElementById('amt-total')
 
     const dollars = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     });
 
-    const selectedPrice = prices[quantitySelected];
-    weekPrice.innerText = dollars.format(selectedPrice.week)
-    biWeeklyPrice.innerText = dollars.format(selectedPrice.biWeekly)
-    monthPrice.innerText = dollars.format(selectedPrice.month)
+    document.getElementById('week-price').innerText = dollars.format(selectedPrice.week);
+    document.getElementById('2-weeks-price').innerText = dollars.format(selectedPrice.biWeekly);
+    document.getElementById('month-price').innerText = dollars.format(selectedPrice.month);
 
     const monthlyPrices = {
-        'week': selectedPrice * 4,
+        'week': selectedPrice.week * 4,
         '2 weeks': selectedPrice.biWeekly * 2,
         'month': selectedPrice.month
-    }
+    };
 
-    monthlyCostModal.innerText = dollars.format(monthlyPrices[freq])
-
+    document.getElementById('amt-total').innerText = dollars.format(monthlyPrices[freq]);
 }
 
 const disableGrind = () => {

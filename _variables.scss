@@ -13,6 +13,52 @@
         text-decoration: none;
         color: rgba(254, 252, 247, 1);
     }
+
+    @media screen and (min-width: 768px) {
+        margin: 2rem 0;
+        width: 55%;
+    }
+}
+
+@mixin footerDesign {
+    text-align: center;
+    background-color: rgba(44, 52, 62, 1);
+    margin: 8rem 1.5rem 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .nav {
+        margin-top: 3.25rem;
+        display: grid;
+        row-gap: 1.5rem;
+        a, a:visited {
+            color: rgba(131, 136, 143, 1);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: .92px;
+            font-size: .75rem;
+        }
+    }
+
+    .social {
+        align-items: center;
+        margin-top: 3.25rem;
+        * {
+            display: inline-block;
+            margin-left: .35rem;
+            margin-right: .35rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 8rem 2.5rem 6rem;
+        .nav {
+            grid-template-columns: repeat(3, auto);
+            column-gap: .5rem;
+            width: 42%;
+            margin: 1.25rem auto 0 ;
+        }
+    }
 }
 
 @mixin checkedOptions {
@@ -33,5 +79,27 @@
     .options {
         transition: 1s ease-in-out;
         display: grid;
+    }
+
+    @media screen and (min-width: 768px) {
+        .options {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: .625rem;
+            
+        }
+    }
+}
+
+@mixin disabledOptions {
+    h4 {
+        color: rgba(131, 136, 143, 1) !important;
+    }
+
+    h5, p {
+        color: rgba(254, 252, 247, 1);
+    }
+
+    .form-control {
+        background: rgba(226, 222, 219, 1);
     }
 }

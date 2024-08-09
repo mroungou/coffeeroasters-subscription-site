@@ -1,0 +1,191 @@
+.about-us {
+    background: url("/assets/about/mobile/image-hero-whitecup.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 10px;
+    color: rgba(254, 252, 247, 1);
+    margin: 2.5rem 1.5rem 0;
+    padding: 6.25rem 1.5rem;
+    display: grid;
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: .938rem;
+        line-height: 160%;
+        font-weight: 300;
+    }
+}
+
+.commitment {
+    margin: 6rem 1.5rem;
+    text-align: center;
+    color: rgba(51, 61, 75, 1);
+    .text {
+        margin-top: 2rem;
+    }
+    h2 {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 1.875rem;
+    }
+    p {
+        line-height: 160%;
+        font-size: .938rem;
+    }
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.quality {
+    display: grid;
+    margin-top: 10rem;
+    .quality-coffee {
+        margin: -4.5rem 3rem 0;
+        z-index: 1;
+        img {
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .qa, .quality-coffee {
+        grid-area: 1/-1;
+    }
+}
+
+
+.qa {
+    display: grid;
+    color: rgba(254, 252, 247, 1);
+    text-align: center;
+    .text {
+        margin: 8rem 1.5rem 0;
+        padding: 0 1.5rem;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: .938rem;
+        line-height: 160%;
+        font-weight: 300;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .bg, 
+    .text {
+        grid-area: 1/-1;
+    }
+}
+
+.hq {
+    margin: 6rem 1.5rem 0;
+    text-align: center;
+    h3 {
+        color: rgba(131, 136, 143, 1);
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+        color: rgba(51, 61, 75, 1);
+        font-weight: 900;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .countries {
+        margin-top: 4rem;
+        display: grid;
+        row-gap: 4rem;
+    }
+    .street, 
+    .city, 
+    .postal, 
+    .number {
+        display: block;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        color: rgba(51, 61, 75, 1);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-us {
+        background: url("/assets/about/tablet/image-hero-whitecup.jpg");
+        background-size: cover;
+        text-align: left;
+        padding: 7.55rem 3rem;
+        margin: 2.5rem 2.5rem 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            width: 70%;
+        }
+    }
+
+    .commitment {
+        margin: 6rem 2.5rem;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        img {
+            width: 88%;
+        }
+        .text {
+            margin-top: 1rem;
+        }
+    }
+
+    .quality {
+        margin-top: 18rem;
+        .quality-coffee {
+            margin: -9.5rem 6rem 0;
+        }
+    }
+
+    .qa {
+        .text {
+            margin: 14rem 2.5rem 0;
+            padding: 0 4.8rem;
+        }
+        .bg {
+            margin: 0 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .hq {
+        text-align: left;
+        margin: 6rem 2.5rem 0;
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        .countries {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 4.5rem;
+        }
+    }
+}
