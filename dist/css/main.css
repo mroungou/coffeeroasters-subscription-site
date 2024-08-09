@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2.5rem 1.5rem 1rem;
   border-radius: 10px;
   padding: 6rem 1.5rem;
-  background-image: url("/assets/home/mobile/image-hero-coffeepress.jpg");
+  background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
   text-align: center;
   color: rgb(254, 252, 247);
 }
