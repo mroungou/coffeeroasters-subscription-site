@@ -916,6 +916,113 @@ h1, h2, h3, h4, h5, h6 {
     width: 31.6%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: grid;
+  }
+  .header {
+    margin: 3rem 5rem;
+  }
+  .ad {
+    margin: 0rem 5rem 1rem;
+    background-image: url("/assets/home/desktop/image-hero-coffeepress.jpg");
+    padding: 6.5rem 5rem;
+  }
+  .ad .text {
+    width: 45%;
+  }
+  .ad h1 {
+    font-size: 4.5rem;
+    line-height: 100%;
+  }
+  .ad p {
+    font-size: 1rem;
+    width: 80%;
+  }
+  .ad .create-plan-btn {
+    width: 44%;
+  }
+  .collection {
+    margin: 10rem 10rem;
+  }
+  .collection .coffees {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2.5rem;
+    text-align: center;
+  }
+  .collection .coffee {
+    grid-template-columns: repeat(1, auto);
+  }
+  .collection h2 {
+    font-size: 9.375rem;
+  }
+  .collection p {
+    font-size: 1rem;
+  }
+  .collection img {
+    width: 90%;
+  }
+  .why-us {
+    margin: 0 5rem;
+  }
+  .why-us .benefits-listed {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 4.35rem;
+    margin-top: 28rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .why-us .best-quality,
+  .why-us .exclusive-benefits,
+  .why-us .free-shipping {
+    grid-template-columns: repeat(1, auto);
+    text-align: center;
+    padding: 2.75rem 3rem 2rem;
+  }
+  .why-us .best-quality img,
+  .why-us .exclusive-benefits img,
+  .why-us .free-shipping img {
+    margin: 0 auto;
+    align-self: center;
+  }
+  .why-us .free-shipping img {
+    margin-top: 2.5rem;
+  }
+  .why-us .free-shipping img .text {
+    margin-top: 0;
+  }
+  .why-us h2 {
+    font-size: 2.5rem;
+  }
+  .why-us p {
+    font-size: 1rem;
+    width: 43%;
+  }
+  .why-us .text {
+    margin-top: 3rem;
+  }
+  .ad-text {
+    padding: 6rem 1.5rem;
+  }
+  .how {
+    margin: 8rem 9rem 0;
+  }
+  .how h2 {
+    margin: 0 0 5rem 0;
+  }
+  .how .info {
+    margin-top: 3rem;
+  }
+  .how .step h3 {
+    font-size: 2rem;
+  }
+  .how .step p {
+    font-size: 1rem;
+  }
+}
 .checked {
   background-color: rgb(14, 135, 132);
   transition: 0.5s ease-in;

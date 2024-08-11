@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         h1 {
-            font-size: 3rem
+            font-size: 3rem;
         }
         p {
             line-height: 160%;
@@ -400,6 +400,139 @@ h1, h2, h3, h4, h5, h6 {
 
         .create-plan-btn {
             width: 31.6%;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: grid;
+    }
+
+    .header {
+        margin: 3rem 5rem;
+    }
+
+    .ad {
+        margin: 0rem 5rem 1rem;
+        background-image: url('/assets/home/desktop/image-hero-coffeepress.jpg');
+        padding: 6.5rem 5rem;
+        .text {
+            width: 45%;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 80%;
+        }
+
+        .create-plan-btn {
+            width: 44%;
+        }
+    }
+
+    .collection {
+        margin: 10rem 10rem;
+
+        .coffees {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0 2.5rem;
+            text-align: center;
+        }
+
+        .coffee {
+            grid-template-columns: repeat(1, auto);
+        }
+
+        h2 {
+            font-size: 9.375rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+
+    .why-us {
+        margin: 0 5rem;
+
+        .benefits-listed {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 4.35rem;
+            margin-top: 28rem;
+            column-gap: 1.5rem;
+        }
+
+        .best-quality,
+        .exclusive-benefits,
+        .free-shipping {
+            grid-template-columns: repeat(1, auto);
+            text-align: center;
+            padding: 2.75rem 3rem 2rem;
+
+            img {
+                margin: 0 auto;
+                align-self: center;
+            }
+        }
+
+        .free-shipping {
+            img {
+                margin-top: 2.5rem;
+                .text {
+                    margin-top: 0;
+                }
+            }
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 43%;
+        }
+
+        .text {
+            margin-top: 3rem
+        }
+    }
+
+    .ad-text {
+        padding: 6rem 1.5rem;
+    }
+
+    .how {
+        margin: 8rem 9rem 0;
+
+        h2 {
+            margin: 0 0 5rem 0;
+        }
+
+        .info {
+            margin-top: 3rem;
+        }
+
+        .step {
+            h3 {
+                font-size: 2rem
+            }
+            p {
+                font-size: 1rem
+            }
         }
     }
 }
