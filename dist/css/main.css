@@ -341,7 +341,6 @@ input[type=radio] {
   border-radius: 8px;
   padding: 0;
   background: rgb(254, 252, 247);
-  padding-bottom: 2rem;
 }
 .order-summary .summary-header {
   background: rgb(51, 61, 75);
@@ -352,22 +351,29 @@ input[type=radio] {
   font-size: 1.75rem;
   font-weight: 900;
 }
-.order-summary span.summary-order {
+.order-summary .summary-order {
   color: rgb(131, 136, 143);
   font-size: 1.5rem;
   font-family: "Fraunces", serif;
   font-weight: 900;
   display: block;
   line-height: 180%;
+  padding-bottom: 0;
+}
+.order-summary .confirmation {
+  padding-top: 0;
 }
 .order-summary .opt-tkn {
   color: rgb(14, 135, 132);
   text-transform: capitalize;
 }
 .order-summary p {
-  margin: 1.5rem;
+  padding: 1.5rem;
   line-height: 165%;
   color: rgb(51, 61, 75);
+}
+.order-summary .checkout {
+  margin-bottom: 2rem;
 }
 .order-summary .create-plan-btn {
   margin: 0 auto;
@@ -438,7 +444,37 @@ input[type=radio] {
     margin-left: auto;
     margin-right: auto;
   }
+  .order-summary {
+    width: 70%;
+    margin: 3rem auto;
+  }
+  .order-summary .summary-header {
+    padding: 2.75rem 3.5rem;
+  }
+  .order-summary h6 {
+    font-size: 2.5rem;
+  }
+  .order-summary p {
+    padding: 2.5rem 3.5rem;
+  }
+  .order-summary .checkout {
+    display: grid;
+    margin: 0 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+  }
+  .order-summary .checkout .total {
+    color: rgb(51, 61, 75);
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+    align-content: center;
+  }
 }
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;

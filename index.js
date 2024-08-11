@@ -5,7 +5,7 @@ const summaryOrder = document.getElementById('order-summary');
 const grindDiv = document.getElementById('grind');
 
 const options = document.querySelectorAll('input[type="radio"]');
-const expandBtn = document.getElementsByClassName('expand');
+const selectOptions = document.getElementsByClassName('heading');
 
 const coffee = document.getElementsByName('how');
 const type = document.getElementsByName('type');
@@ -69,7 +69,8 @@ function updatePrice(quantitySelected, freq) {
         'month': selectedPrice.month
     };
 
-    document.getElementById('amt-total').innerText = dollars.format(monthlyPrices[freq]);
+    document.getElementById('amt-total').innerText = `- ${dollars.format(monthlyPrices[freq])} / month`;
+    document.getElementById('total').innerText = `${dollars.format(monthlyPrices[freq])} / mo`
 }
 
 const disableGrind = () => {
@@ -115,10 +116,10 @@ function updateOption() {
     updateSummary()
 }
 
-for (const btn of expandBtn) {
-    btn.addEventListener('click', () => {
-        if (!btn.parentElement.parentElement.classList.contains('disabled')) {
-            btn.parentElement.parentElement.classList.toggle('hiddenToggle');
+for (const heading of selectOptions) {
+    heading.addEventListener('click', () => {
+        if (!heading.parentElement.classList.contains('disabled')) {
+            heading.parentElement.classList.toggle('hiddenToggle');
         } 
     })
 }

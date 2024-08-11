@@ -213,15 +213,20 @@
     <!-- Modal -->
     <dialog class="order-summary" id="order-summary">
         <div class="summary-header"><h6>Order Summary</h6></div>
-        <p>
-            <span class="summary-order" id="summary-modal">
-            
-            </span>
+        <p class="summary-order" id="summary-modal">
+        
+        </p>
+        <p class="confirmation">
             Is this correct? You can proceed to checkout or go back to plan selection if something
             is off. Subscription discount codes can also be redeemed at the checkout.
         </p>
-        <div class="create-plan-btn">
-            Checkout - <span class="amt-total" id="amt-total"></span> / month
+        <div class="checkout">
+            <div class="tablet total">
+                <span class="total" id="total"></span>
+            </div>
+            <div class="create-plan-btn">
+                Checkout <span class="amt-total mobile" id="amt-total"></span>
+            </div>
         </div>
     </dialog>
     <!-- End modal -->

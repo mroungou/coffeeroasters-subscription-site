@@ -148,7 +148,6 @@ input[type="radio"] {
     border-radius: 8px;
     padding: 0;
     background: rgba(254, 252, 247, 1);
-    padding-bottom: 2rem;
     .summary-header {
         background: rgba(51, 61, 75, 1);
         padding: 1.5rem;
@@ -161,13 +160,18 @@ input[type="radio"] {
         font-weight: 900;
     }
 
-    span.summary-order {
+    .summary-order {
         color: rgba(131, 136, 143, 1);
         font-size: 1.5rem;
         font-family: "Fraunces", serif;
         font-weight: 900;
         display: block;
         line-height: 180%;
+        padding-bottom: 0;
+    }
+
+    .confirmation {
+        padding-top: 0;
     }
 
     .opt-tkn {
@@ -176,16 +180,20 @@ input[type="radio"] {
     }
 
     p {
-        margin: 1.5rem;
+        padding: 1.5rem;
         line-height: 165%;
         color: rgba(51, 61, 75, 1);
-        // margin-top: 1.5rem;
+    }
+
+    .checkout {
+        margin-bottom: 2rem;
     }
 
     .create-plan-btn {
         margin: 0 auto;
         box-sizing: border-box;
         width: 86%;
+        // margin-bottom: 2rem;
     }
 }
 
@@ -252,4 +260,38 @@ input[type="radio"] {
         margin-right: auto;
     }
 
+    .order-summary {
+        width: 70%;
+        margin: 3rem auto;
+        .summary-header {
+            padding: 2.75rem 3.5rem;
+        }
+
+        h6 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            padding: 2.5rem 3.5rem;
+        }
+
+        .checkout {
+            display: grid;
+            margin: 0 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 2rem;
+            .total {
+                color: rgba(51, 61, 75, 1);
+                font-size: 2rem;
+                font-weight: 900;
+                font-family: "Fraunces", serif;
+                align-content: center;
+            }
+        }
+    }
+
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
 }
