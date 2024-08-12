@@ -532,24 +532,36 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(51, 61, 75);
 }
 
-.ad {
+.hero {
+  display: grid;
+  position: relative;
   margin: 2.5rem 1.5rem 1rem;
   border-radius: 10px;
-  padding: 6rem 1.5rem;
-  background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
   text-align: center;
   color: rgb(254, 252, 247);
 }
-.ad h1 {
+.hero img {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+}
+.hero h1 {
   font-weight: 900;
   font-size: 2.5rem;
 }
-.ad p {
+.hero p {
   font-size: 0.938rem;
   font-weight: 200;
   line-height: 150%;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+.hero .text {
+  padding: 6rem 1.5rem;
+}
+.hero .bg-img,
+.hero .text {
+  grid-area: 1/-1;
 }
 
 .create-plan-btn {
@@ -558,11 +570,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Fraunces", serif;
   font-size: 1.125rem;
   padding: 1rem;
-  width: 78%;
   margin: 2rem auto 0;
   border-radius: 6px;
   text-align: center;
   color: rgb(254, 252, 247);
+  width: 217px;
 }
 .create-plan-btn a, .create-plan-btn a:visited {
   text-decoration: none;
@@ -571,7 +583,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) {
   .create-plan-btn {
     margin: 2rem 0;
-    width: 55%;
   }
 }
 
@@ -581,14 +592,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .collection .h2 {
   display: grid;
-  padding: 0.9rem 0;
+  padding: 1rem 0;
 }
 .collection .h2:after {
   content: "";
   background-image: linear-gradient(rgba(254, 252, 247, 0.0001), rgb(254, 252, 247));
+}
+.collection .h2::after, .collection h2 {
   grid-area: 1/-1;
 }
-.collection .coffees {
+.collection .coffees-selection {
   display: grid;
   row-gap: 4rem;
   margin-top: 2rem;
@@ -598,7 +611,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .collection h2 {
   text-transform: lowercase;
-  grid-area: 1/-1;
   color: rgb(131, 136, 143);
   font-weight: 900;
   font-size: 2.5rem;
@@ -619,59 +631,58 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 .collection img {
-  width: 55%;
+  width: 200px;
+  height: 157px;
 }
 
-.why-us {
+.benefits {
   color: rgb(254, 252, 247);
   text-align: center;
   line-height: 170%;
   margin: 0 1.5rem;
   border-radius: 10px;
-}
-.why-us .benefits-listed {
   display: grid;
-  row-gap: 1rem;
-  margin: 0 1.5rem;
-  margin-top: 20rem;
 }
-.why-us .benefits-bg img {
+.benefits .benefits-bg img {
   box-sizing: border-box;
   width: 100%;
   border-radius: 10px;
 }
-.why-us .benefits-listed img {
+.benefits .reasons img {
   margin-top: 2.125rem;
   margin-bottom: 1rem;
 }
-.why-us .best-quality,
-.why-us .exclusive-benefits,
-.why-us .free-shipping {
+.benefits .reason {
   background-color: rgb(14, 135, 132);
   padding: 2rem 1rem;
   border-radius: 8px;
 }
-.why-us .best-quality p,
-.why-us .exclusive-benefits p,
-.why-us .free-shipping p {
+.benefits .reason p {
   width: 80%;
   margin: 1.5rem auto;
 }
-.why-us .free-shipping h3 {
+.benefits .free-shipping h3 {
   margin-top: 3.379rem;
 }
-.why-us p {
+.benefits p {
   font-size: 0.938rem;
   font-weight: 300;
 }
-.why-us h2 {
+.benefits h2 {
   font-size: 1.75rem;
   font-weight: 900;
   margin-bottom: 2rem;
 }
-.why-us h3 {
+.benefits h3 {
   margin-top: 2rem;
   font-size: 1.5rem;
+}
+
+.reasons {
+  display: grid;
+  row-gap: 1rem;
+  margin: 0 1.5rem;
+  margin-top: 20rem;
 }
 
 .ad-text {
@@ -680,12 +691,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-.benefits {
-  border-radius: 10px;
-  display: grid;
-}
-.benefits .benefits-bg,
-.benefits .benefits-listed, .benefits .ad-text {
+.benefits-bg,
+.reasons,
+.ad-text {
   grid-area: 1/2;
 }
 
@@ -726,7 +734,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Fraunces", serif;
   font-size: 1.125rem;
   padding: 1rem;
-  width: 78%;
   margin: 2rem auto 0;
   border-radius: 6px;
   text-align: center;
@@ -739,7 +746,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) {
   .how .create-plan-btn {
     margin: 2rem 0;
-    width: 55%;
   }
 }
 

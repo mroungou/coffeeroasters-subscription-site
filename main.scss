@@ -60,14 +60,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.ad {
+.hero {
+    // grid is being used to make sure that the bg and text overlap
+    display: grid;
+    position: relative;
     margin: 2.5rem 1.5rem 1rem;
     border-radius: 10px;
-    padding: 6rem 1.5rem;
-    background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
-    // background-image: url('/assets/home/mobile/image-hero-coffeepress.jpg');
     text-align: center;
     color: rgba(254, 252, 247, 1);
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
     h1 {
         font-weight: 900;
         font-size: 2.5rem;
@@ -80,35 +85,53 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1rem;
     }
 
+    .text {
+        padding: 6rem 1.5rem;
+    }
+
+    // code below makes sure that they overlap
+
+    .bg-img,
+    .text {
+        grid-area: 1/-1;
+    }
+
 }
 
 .create-plan-btn {
-    @include variables.createBtn
+    @include variables.createBtn;
+    width: 217px;
 }
 .collection {
     text-align: center;
     margin-bottom: 4rem;
     .h2 {
+        // the after and the text overlap
         display: grid;
-        padding: .9rem 0;
+        padding: 1rem 0;
         &:after {
             content: "";
             background-image: linear-gradient(rgba(254, 252, 247, 0.0001), rgba(254, 252, 247, 1));
-            grid-area: 1/-1;
         }
     }
-
-    .coffees {
+    // this put h2 and after to overlap
+    .h2::after, h2 {
+        grid-area: 1/-1;
+    }
+    
+    .coffees-selection { // main div that contains all the smaller divs
+        // grid to include row gap
         display: grid;
         row-gap: 4rem;
         margin-top: 2rem;
     }
+
     .text {
         margin-top: 1rem;
     }
+
     h2 {
         text-transform: lowercase;
-        grid-area: 1/-1;
         color: rgba(131, 136, 143, 1);
         font-weight: 900;
         font-size: 2.5rem;
@@ -132,40 +155,38 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     img {
-        width: 55%;
+        width: 200px;
+        height: 157px;
     }
 }
 
-.why-us {
+
+// this is the main div that has all the elements - the section
+.benefits {
     color: rgba(254, 252, 247, 1);
     text-align: center;
     line-height: 170%;
     margin: 0 1.5rem;
     border-radius: 10px;
-
-    .benefits-listed {
-        display: grid;
-        row-gap: 1rem;
-        margin: 0 1.5rem;
-        margin-top: 20rem;
-    }
+    // grid is used so the elements (ad-text, benefits-bg, and the reasons to overlap)
+    display: grid;
     
     .benefits-bg img {
         box-sizing: border-box;
         width: 100%;
         border-radius: 10px;
     }
-    .benefits-listed img {
+    // controls the size of the coffee images
+    .reasons img {
         margin-top: 2.125rem;
         margin-bottom: 1rem;
     }
     
-    .best-quality,
-    .exclusive-benefits,
-    .free-shipping {
+    .reason {
         background-color: rgba(14, 135, 132, 1);
         padding: 2rem 1rem;
         border-radius: 8px;
+        // controls the size of the paragraphs in the 3 cards
         p {
             width: 80%;
             margin: 1.5rem auto;
@@ -192,22 +213,26 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.5rem;
     }
 }
+// this styles the 3 cards and
+.reasons {
+    display: grid;
+    row-gap: 1rem;
+    margin: 0 1.5rem;
+    margin-top: 20rem;
+}
 
 .ad-text {
-    // background-color: rgba(44, 52, 62, 1);
     padding: 4rem 1.5rem;
     border-radius: 10px 10px 0 0;
     z-index: 1;
 }
-
-.benefits {
-    border-radius: 10px;
-    display: grid;
-    .benefits-bg, 
-    .benefits-listed, .ad-text {
+// this makes sure that they overlap
+.benefits-bg,
+.reasons, 
+.ad-text {
         grid-area: 1/2;
-    }
 }
+
 
 .how {
     text-align: center;

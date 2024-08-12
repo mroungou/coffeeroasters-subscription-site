@@ -4,7 +4,7 @@
     font-family: "Fraunces", serif;
     font-size: 1.125rem;
     padding: 1rem;
-    width: 78%;
+    // width: 78%;
     margin: 2rem auto 0;
     border-radius: 6px;
     text-align: center;
@@ -16,7 +16,7 @@
 
     @media screen and (min-width: 768px) {
         margin: 2rem 0;
-        width: 55%;
+        // width: 55%;
     }
 }
 
@@ -85,7 +85,7 @@
         .options {
             grid-template-columns: repeat(3, 1fr);
             column-gap: .625rem;
-            
+
         }
     }
 }
