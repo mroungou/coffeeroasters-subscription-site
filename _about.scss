@@ -1,13 +1,24 @@
 .about-us {
-    background: url("/assets/about/mobile/image-hero-whitecup.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     text-align: center;
     border-radius: 10px;
     color: rgba(254, 252, 247, 1);
     margin: 2.5rem 1.5rem 0;
-    padding: 6.25rem 1.5rem;
     display: grid;
+    // this makes the bg-img and text to overlap
+    .bg-img, 
+    .text {
+        grid-area: 1/2;
+    }
+    // has h1 and p elemts - makes sure they are styled correctly
+    .text {
+        padding: 6.25rem 1.5rem;
+    }
+
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
     h1 {
         font-size: 1.75rem;
         font-weight: 900;
@@ -46,28 +57,41 @@
 .quality {
     display: grid;
     margin-top: 10rem;
-    .quality-coffee {
-        margin: -4.5rem 3rem 0;
-        z-index: 1;
-        img {
-            box-sizing: border-box;
-            width: 100%;
-            border-radius: 10px;
-        }
-    }
-    .qa, .quality-coffee {
+    // makes sure that the text and the img overlap
+    .qa-text, 
+    .coffee-img {
         grid-area: 1/-1;
     }
 }
 
+// styling for the img at the top of the quality card
+.coffee-img {
+    margin: -4.5rem 3rem 0;
+    z-index: 1;
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
 
-.qa {
+
+.qa-text {
+    // contains the bg and the text
+    // makes sure that they overlap
+    // text on top of the bg img
     display: grid;
     color: rgba(254, 252, 247, 1);
     text-align: center;
     .text {
         margin: 8rem 1.5rem 0;
         padding: 0 1.5rem;
+    }
+
+    .bg, 
+    .text {
+        // makes the bg img and text overlap - same grid spot
+        grid-area: 1/-1;
     }
 
     h2 {
@@ -83,11 +107,6 @@
 
     img {
         border-radius: 10px;
-    }
-
-    .bg, 
-    .text {
-        grid-area: 1/-1;
     }
 }
 
@@ -107,14 +126,13 @@
         margin-bottom: 2rem;
     }
     .countries {
+        // grid so they can later be changed for vertical or horizontal placements
         margin-top: 4rem;
         display: grid;
         row-gap: 4rem;
     }
-    .street, 
-    .city, 
-    .postal, 
-    .number {
+    // sstyling for postal code - street, etc
+    .detail{
         display: block;
         margin-bottom: .5rem;
         font-size: 1rem;

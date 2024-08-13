@@ -37,7 +37,7 @@ function updateSummary () {
         `
 
 
-    document.getElementById('test').innerHTML = summaryTemplate;
+    document.getElementById('summary').innerHTML = summaryTemplate;
     document.getElementById('summary-modal').innerHTML = summaryTemplate;
 }
 

@@ -1,11 +1,24 @@
 .create-plan {
     margin: 2.5rem 1.5rem;
-    background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg');
-    background-size: cover;
     text-align: center;
     color: rgba(254, 252, 247, 1);
-    padding: 6rem 1.5rem 9rem;
     border-radius: 10px;
+    // bg-img and text will be overlapping with grid
+    display: grid;
+    .text {
+        padding: 6rem 1.5rem 9rem;
+    }
+    // makes sure that theyoverlap with text on top
+    .bg-img, .text {
+        grid-area: 1/-1;
+    }
+
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+    }
+
     h1 {
         font-size: 2.5rem;
         font-weight: 900;
@@ -17,16 +30,18 @@
         line-height: 160%;
     }
 }
-
+// main div
 .steps {
     background: rgba(44, 52, 62, 1);
     color: rgba(255, 255, 255, 1);
     text-align: center;
     padding: 5rem 1.25rem;
+    // div that contains the 3 steps
     .steps-info {
         display: grid;
         row-gap: 3rem;  
     }
+    // span element with number and gold text
     .step-number {
         color: rgba(253, 214, 186, 1);
         font-weight: 900;
@@ -83,32 +98,33 @@
         font-size: 1rem;
     }
 }
-
+// has the different options
+// hidden until the user clicks heading
 .options {
     display: none;
     row-gap: 1rem;
 }
-
+// contains radio button and text
+// label wraps around the radio button and the input wraps the h5 and p
 .form-control {
     background-color: rgba(244, 241, 235, 1);
-    padding: 2.75rem 1.5rem 4.75rem;
+    padding: 1.65rem 1.5rem;
     border-radius: 8px;
+    // grid is used so the the text and the input are 1 and when clicked the radio is checked
     display: grid;
     input, h5 {
         grid-area: 1/-1;
     }
 }
-
+// styling for the radio btn to hide it
 input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 1.25rem;
-    height: 1.25rem;
 }
 
 
 
-.summary {
+.summary-div .text {
     margin: 6rem 1.5rem 0;
     padding: 1.5rem;
     background-color: rgba(44, 52, 62, 1);
@@ -133,9 +149,7 @@ input[type="radio"] {
         text-transform: capitalize;
     }
 }
-.summary-div .create-plan-btn {
-    width: 60%;
-}
+
 
 .order-summary {
     position: fixed;

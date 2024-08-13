@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 .about-us {
-  background: url("/assets/about/mobile/image-hero-whitecup.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
   border-radius: 10px;
   color: rgb(254, 252, 247);
   margin: 2.5rem 1.5rem 0;
-  padding: 6.25rem 1.5rem;
   display: grid;
+}
+.about-us .bg-img,
+.about-us .text {
+  grid-area: 1/2;
+}
+.about-us .text {
+  padding: 6.25rem 1.5rem;
+}
+.about-us img {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
 }
 .about-us h1 {
   font-size: 1.75rem;
@@ -48,44 +56,46 @@
   display: grid;
   margin-top: 10rem;
 }
-.quality .quality-coffee {
+.quality .qa-text,
+.quality .coffee-img {
+  grid-area: 1/-1;
+}
+
+.coffee-img {
   margin: -4.5rem 3rem 0;
   z-index: 1;
 }
-.quality .quality-coffee img {
+.coffee-img img {
   box-sizing: border-box;
   width: 100%;
   border-radius: 10px;
 }
-.quality .qa, .quality .quality-coffee {
-  grid-area: 1/-1;
-}
 
-.qa {
+.qa-text {
   display: grid;
   color: rgb(254, 252, 247);
   text-align: center;
 }
-.qa .text {
+.qa-text .text {
   margin: 8rem 1.5rem 0;
   padding: 0 1.5rem;
 }
-.qa h2 {
+.qa-text .bg,
+.qa-text .text {
+  grid-area: 1/-1;
+}
+.qa-text h2 {
   font-weight: 900;
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
 }
-.qa p {
+.qa-text p {
   font-size: 0.938rem;
   line-height: 160%;
   font-weight: 300;
 }
-.qa img {
+.qa-text img {
   border-radius: 10px;
-}
-.qa .bg,
-.qa .text {
-  grid-area: 1/-1;
 }
 
 .hq {
@@ -109,10 +119,7 @@
   display: grid;
   row-gap: 4rem;
 }
-.hq .street,
-.hq .city,
-.hq .postal,
-.hq .number {
+.hq .detail {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1rem;
@@ -178,11 +185,20 @@
 }
 .create-plan {
   margin: 2.5rem 1.5rem;
-  background-image: url("/assets/plan/mobile/image-hero-blackcup.jpg");
-  background-size: cover;
   text-align: center;
   color: rgb(254, 252, 247);
+  border-radius: 10px;
+  display: grid;
+}
+.create-plan .text {
   padding: 6rem 1.5rem 9rem;
+}
+.create-plan .bg-img, .create-plan .text {
+  grid-area: 1/-1;
+}
+.create-plan img {
+  box-sizing: border-box;
+  width: 100%;
   border-radius: 10px;
 }
 .create-plan h1 {
@@ -286,7 +302,7 @@
 
 .form-control {
   background-color: rgb(244, 241, 235);
-  padding: 2.75rem 1.5rem 4.75rem;
+  padding: 1.65rem 1.5rem;
   border-radius: 8px;
   display: grid;
 }
@@ -298,37 +314,31 @@ input[type=radio] {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
-.summary {
+.summary-div .text {
   margin: 6rem 1.5rem 0;
   padding: 1.5rem;
   background-color: rgb(44, 52, 62);
   color: rgb(255, 255, 255);
   border-radius: 8px;
 }
-.summary #order-summary-header {
+.summary-div .text #order-summary-header {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
   display: block;
   margin-bottom: 0.5rem;
 }
-.summary p {
+.summary-div .text p {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 165%;
 }
-.summary .opt-tkn {
+.summary-div .text .opt-tkn {
   color: rgb(14, 135, 132);
   text-transform: capitalize;
-}
-
-.summary-div .create-plan-btn {
-  width: 60%;
 }
 
 .order-summary {
@@ -480,7 +490,8 @@ dialog::backdrop {
   box-sizing: border-box;
 }
 
-.tablet, .desktop {
+.tablet,
+.desktop {
   display: none;
 }
 
@@ -540,6 +551,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: rgb(254, 252, 247);
 }
+.hero .text {
+  padding: 6rem 1.5rem;
+}
+.hero .bg-img,
+.hero .text {
+  grid-area: 1/-1;
+}
 .hero img {
   box-sizing: border-box;
   width: 100%;
@@ -555,13 +573,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 150%;
   margin-top: 2rem;
   margin-bottom: 1rem;
-}
-.hero .text {
-  padding: 6rem 1.5rem;
-}
-.hero .bg-img,
-.hero .text {
-  grid-area: 1/-1;
 }
 
 .create-plan-btn {
@@ -671,7 +682,7 @@ h1, h2, h3, h4, h5, h6 {
 .benefits h2 {
   font-size: 1.75rem;
   font-weight: 900;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .benefits h3 {
   margin-top: 2rem;
@@ -796,7 +807,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   .tablet {
-    display: block;
+    display: grid;
   }
   .header {
     margin: 2rem 2.5rem;
@@ -815,32 +826,31 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     letter-spacing: 0.92px;
   }
-  .ad {
+  .hero {
+    display: grid;
     margin: 2.5rem 2.5rem 1rem;
-    background-image: url("/assets/home/tablet/image-hero-coffeepress.jpg");
-    background-size: cover;
     text-align: left;
-    padding: 6rem 3.5rem;
   }
-  .ad .text {
+  .hero .text {
+    padding: 5.5rem 3rem 0rem;
     width: 70%;
   }
-  .ad h1 {
+  .hero h1 {
     font-size: 3rem;
+    line-height: 100%;
   }
-  .ad p {
+  .hero p {
     line-height: 160%;
   }
   .collection {
-    margin: 6rem 2.5rem;
+    margin: 6rem 3rem;
     margin-top: 4rem;
-    text-align: center;
   }
-  .collection .coffees {
+  .collection .coffees-selection {
     padding: 0 3rem;
     text-align: left;
     margin-top: -3.5rem;
-    row-gap: 3rem;
+    row-gap: 1.75rem;
   }
   .collection .coffee {
     display: grid;
@@ -848,7 +858,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
-  .collection .coffee .text {
+  .collection .text {
     margin-top: 1rem;
   }
   .collection h2 {
@@ -856,24 +866,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .collection p {
     margin: 1.5rem 0 0;
-    width: 95%;
     line-height: 165%;
+    width: 100%;
   }
   .collection img {
     margin-left: auto;
-    width: 80%;
+    width: 256px;
+    height: 193px;
   }
-  .why-us {
+  .benefits {
     margin: 0 2.5rem;
   }
-  .why-us .benefits-listed {
+  .benefits .reasons {
     margin: 0 3.5rem;
     margin-top: 17rem;
     row-gap: 1.5rem;
   }
-  .why-us .best-quality,
-  .why-us .exclusive-benefits,
-  .why-us .free-shipping {
+  .benefits .reason {
     text-align: left;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -881,19 +890,17 @@ h1, h2, h3, h4, h5, h6 {
          column-gap: 3.438rem;
     padding: 1.6rem 3.5rem;
   }
-  .why-us .best-quality p,
-  .why-us .exclusive-benefits p,
-  .why-us .free-shipping p {
+  .benefits .reason p {
     width: 100%;
   }
-  .why-us h2 {
+  .benefits h2 {
     font-size: 2rem;
   }
-  .why-us h3 {
+  .benefits h3 {
     margin-top: 0;
   }
-  .why-us p {
-    width: 75%;
+  .ad-text {
+    width: 79%;
     margin: 0 auto;
   }
   .how {
@@ -1054,7 +1061,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .disabled h4 {
-  color: rgb(131, 136, 143) !important;
+  color: rgb(193, 195, 199);
 }
 .disabled h5, .disabled p {
   color: rgb(254, 252, 247);

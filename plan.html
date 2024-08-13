@@ -10,18 +10,23 @@
 
 <body>
   <main>
+<!-- this sections contains all the header stuff - logo and navbar -->
     <section class="header">
-        <div class="logo"><img src="./assets/shared/desktop/logo.svg" alt="Coffeeroasters"></div>
+        <div class="logo">
+            <img src="./assets/shared/desktop/logo.svg" alt="Coffeeroasters">
+        </div>
+        <!-- look at js file to see how the menu is opened and closed -->
         <div class="menu-toggle-btn mobile" id="menu-btn">
             <img class="menu" id="menu" onclick="openNav()" src="./assets/shared/mobile/icon-hamburger.svg" alt="Menu">
             <img class="close-btn" id="close-btn" onclick="closeNav()" src="./assets/shared/mobile/icon-close.svg" alt="Close Button">
         </div>
-        <div class="nav-bar tablet">
+        <div class="nav-bar tablet desktop">
             <a href="./index.html">Home</a>
             <a href="./about.html">About us</a>
             <a href="./plan.html">Create your plan</a>
         </div>
     </section>
+    <!-- this is the mobile menu and the link to the other pages -->
     <div class="overlay mobile" id="overlay">
         <div class="nav">
             <a href="./index.html">Home</a>
@@ -29,15 +34,29 @@
             <a href="./plan.html">Create your plan</a>
         </div>
     </div>
+    <!-- hero section has text and bg img -->
     <section class="create-plan">
-        <h1>Create a plan</h1>
-        <p>
-            Build a subscription plan that best fits your needs. We offer an assortment of the best
-            artisan coffees from around the globe delivered fresh to your door.
-        </p>
+        <!-- bg img div -->
+        <div class="bg-img">
+            <img class="mobile" src="./assets/plan/mobile/image-hero-blackcup.jpg" alt="Background Image">
+            <img class="tablet" src="./assets/plan/tablet/image-hero-blackcup.jpg" alt="Background Image">
+            <img class="desktop" src="./assets/plan/desktop/image-hero-blackcup.jpg" alt="Background Image">
+        </div>
+        <!-- has text will be used to overlap with bg-img div -->
+        <div class="text">
+            <h1>Create a plan</h1>
+            <p>
+                Build a subscription plan that best fits your needs. We offer an assortment of the best
+                artisan coffees from around the globe delivered fresh to your door.
+            </p>
+        </div>
     </section>
+    <!-- main div that contains all elements -->
     <section class="steps">
+        <!-- illustrations with -->
         <img class="tablet" src="./assets/shared/desktop/steps-illustration.svg" alt="">
+        <img class="desktop" src="./assets/shared/desktop/steps-illustration.svg" alt="">
+        <!-- div that contains the 3 steps -->
         <div class="steps-info">
             <div class="step step1">
                 <span class="step-number">01</span>
@@ -71,12 +90,18 @@
     03 Quantity
     04 Grind option
     05 Deliveries -->
+    <!-- start of option selection -->
     <section class="how-drink">
-        <div class="options-how heading">
+        <!-- contains h4 tag and the arrow to expand -->
+        <div class="heading">
             <h4>How do you drink your coffee?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
+        <!-- contains the different options  -->
         <div class="options">
+            <!-- radio button and text -->
+             <!-- label wraps around the the radio button and the input wraps the h5 and p -->
+              <!-- grid will be used to make sure that they all overlap and clickable -->
             <label for="capsule" class="form-control">
                 <input type="radio" id="capsule" name="how" value="capsule">
                     <h5>Capsule</h5>
@@ -98,7 +123,7 @@
         </div>
     </section>
     <section class="type">
-        <div class="options-type heading">
+        <div class="heading">
             <h4>What type of coffee?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
@@ -124,7 +149,7 @@
         </div>
     </section>
     <section class="quantity">
-        <div class="options-quantity heading">
+        <div class="heading">
             <h4>How much would you like?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
@@ -150,7 +175,7 @@
         </div>
     </section>
     <section class="grind" id="grind">
-        <div class="options-grind heading" >
+        <div class="heading" >
             <h4>Want us to grind them?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
@@ -176,7 +201,7 @@
         </div>
     </section>
     <section class="frequency">
-        <div class="options-freq heading">
+        <div class="heading">
             <h4>How often should we deliver?</h4>
             <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
         </div>
@@ -201,11 +226,16 @@
             </label>
         </div>
     </section>
+    <!-- main div -->
+     <!-- order summary at the bottom of the page after selecting all options and
+      before clicking create my plan -->
     <section class="summary-div">
-        <div class="summary">
+        <!-- contains the summary -->
+        <div class="text">
             <span id="order-summary-header">Order Summary</span>
-            <p id="test">
-                
+            <!-- text will be dynamically updated by JS -->
+            <p id="summary">
+
             </p>
         </div>
         <div class="create-plan-btn" onclick="openModal()" id="confirm-order">Create my plan!</div>
@@ -213,17 +243,22 @@
     <!-- Modal -->
     <dialog class="order-summary" id="order-summary">
         <div class="summary-header"><h6>Order Summary</h6></div>
+        <!-- will be updated by JS -->
         <p class="summary-order" id="summary-modal">
-        
+
         </p>
         <p class="confirmation">
             Is this correct? You can proceed to checkout or go back to plan selection if something
             is off. Subscription discount codes can also be redeemed at the checkout.
         </p>
+        <!-- contains the div for the btn and the price -->
+         <!-- the total div is for tablet and desktop -->
         <div class="checkout">
-            <div class="tablet total">
+            <!-- for tablet and desktop -->
+            <div class="tablet desktop total">
                 <span class="total" id="total"></span>
             </div>
+            <!-- for mobile only -->
             <div class="create-plan-btn">
                 Checkout <span class="amt-total mobile" id="amt-total"></span>
             </div>

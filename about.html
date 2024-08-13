@@ -12,37 +12,49 @@
 </head>
 
 <body>
-  <main>
-    <section class="header">
-        <div class="logo"><img src="./assets/shared/desktop/logo.svg" alt="Coffeeroasters"></div>
-        <div class="menu-toggle-btn mobile" id="menu-btn">
-            <img class="menu" id="menu" onclick="openNav()" src="./assets/shared/mobile/icon-hamburger.svg" alt="Menu">
-            <img class="close-btn" id="close-btn" onclick="closeNav()" src="./assets/shared/mobile/icon-close.svg" alt="Close Button">
+    <main>
+        <!-- this sections contains all the header stuff - logo and navbar -->
+        <section class="header">
+            <div class="logo">
+                <img src="./assets/shared/desktop/logo.svg" alt="Coffeeroasters">
+            </div>
+            <!-- look at js file to see how the menu is opened and closed -->
+            <div class="menu-toggle-btn mobile" id="menu-btn">
+                <img class="menu" id="menu" onclick="openNav()" src="./assets/shared/mobile/icon-hamburger.svg" alt="Menu">
+                <img class="close-btn" id="close-btn" onclick="closeNav()" src="./assets/shared/mobile/icon-close.svg" alt="Close Button">
+            </div>
+            <div class="nav-bar tablet desktop">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About us</a>
+                <a href="./plan.html">Create your plan</a>
+            </div>
+        </section>
+        <!-- this is the mobile menu and the link to the other pages -->
+        <div class="overlay mobile" id="overlay">
+            <div class="nav">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About us</a>
+                <a href="./plan.html">Create your plan</a>
+            </div>
         </div>
-        <div class="nav-bar tablet">
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About us</a>
-            <a href="./plan.html">Create your plan</a>
-        </div>
-    </section>
-    <div class="overlay mobile" id="overlay">
-        <div class="nav">
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About us</a>
-            <a href="./plan.html">Create your plan</a>
-        </div>
-    </div>
     <section class="about-us">
-        <h1>About us</h1>
-        <p>
-            Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of
-            coffee from around the world. We have since been dedicated to bring the perfect cup - from
-            bean to brew - in every shipment.
-        </p>
+        <!-- hero sections -->
+         <!-- contains the bg image and the text -->
+        <div class="bg-img">
+            <img class="mobile" src="./assets/about/mobile/image-hero-whitecup.jpg" alt="Background Image">
+        </div>
+        <div class="text">
+            <h1>About us</h1>
+            <p>
+                Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of
+                coffee from around the world. We have since been dedicated to bring the perfect cup - from
+                bean to brew - in every shipment.
+            </p>
+        </div>
     </section>
    <section class="commitment">
-    <img class="mobile" src="./assets/about/mobile/image-commitment.jpg" alt="Barista Making Coffeeroasters">
-    <img class="tablet" src="./assets/about/tablet/image-commitment.jpg" alt="Barista Making Coffeeroasters">
+        <img class="mobile" src="./assets/about/mobile/image-commitment.jpg" alt="Barista Making Coffeeroasters">
+        <img class="tablet" src="./assets/about/tablet/image-commitment.jpg" alt="Barista Making Coffeeroasters">
        <div class="text">
            <h2>Our commitment</h2>
            <p>
@@ -57,12 +69,16 @@
            </p>
        </div>
    </section>
+   <!-- contains the background img, image at the top of the card and text -->
 <section class="quality">
-    <div class="quality-coffee">
+    <!-- img at the top of the card -->
+    <div class="coffee-img">
         <img class="mobile" src="./assets/about/mobile/image-quality.jpg" alt="Coffeeroasters quality coffee">
         <img class="tablet" src="./assets/about/tablet/image-quality.jpg" alt="Coffeeroasters quality coffee">
     </div>
-    <div class="qa">
+    <!-- contains the bg img and text -->
+    <div class="qa-text">
+        <!-- background img -->
         <div class="bg">
             <img class="mobile" src="./assets/about/mobile/bg-quality.png" alt="">
             <img class="tablet" src="./assets/about/tablet/bg-quality.png" alt="">
@@ -78,32 +94,34 @@
         </div>
     </div>
 </section>
+<!-- main div containing the different locations -->
     <section class="hq">
         <h3>Our headquarters</h3>
+        <!-- div containing the countries -->
         <div class="countries">
             <div class="uk country">
                 <img src="./assets/about/desktop/illustration-uk.svg" alt="United Kingdom">
                 <h4>United Kingdom</h4>
-                <span class="street">68 Asfordby Rd</span>
-                <span class="city">Alcaston</span>
-                <span class="postal">SY6 1YA</span>
-                <span class="number">+44 1241 918425</span>
+                <span class="street detail">68 Asfordby Rd</span>
+                <span class="city detail">Alcaston</span>
+                <span class="postal detail">SY6 1YA</span>
+                <span class="number detail">+44 1241 918425</span>
             </div>
             <div class="ca country">
                 <img src="./assets/about/desktop/illustration-canada.svg" alt="Canada">
                 <h4>Canada</h4>
-                <span class="street">1528 Eglinton Avenue</span>
-                <span class="street">Toronto</span>
-                <span class="postal">Ontario M4P 1A6</span>
-                <span class="number">+1 416 485 2997</span>
+                <span class="street detail">1528 Eglinton Avenue</span>
+                <span class="street detail">Toronto</span>
+                <span class="postal detail">Ontario M4P 1A6</span>
+                <span class="number detail">+1 416 485 2997</span>
             </div>
             <div class="au country">
                 <img src="./assets/about/desktop/illustration-australia.svg" alt="Australia">
                 <h4>Australia</h4>
-                <span class="street">36 Swanston Street</span>
-                <span class="city">Kewell</span>
-                <span class="postal">Victoria</span>
-                <span class="number">+61 4 9928 3629</span>
+                <span class="street detail">36 Swanston Street</span>
+                <span class="city detail">Kewell</span>
+                <span class="postal detail">Victoria</span>
+                <span class="number detail">+61 4 9928 3629</span>
             </div>
         </div>
     </section>

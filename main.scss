@@ -8,7 +8,8 @@
     box-sizing: border-box;
 }
 
-.tablet, .desktop {
+.tablet, 
+.desktop {
     display: none;
 }
 
@@ -68,6 +69,15 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     text-align: center;
     color: rgba(254, 252, 247, 1);
+
+    .text {
+        padding: 6rem 1.5rem;
+    }
+    // code below makes sure that they overlap
+    .bg-img,
+    .text {
+        grid-area: 1/-1;
+    }
     img {
         box-sizing: border-box;
         width: 100%;
@@ -84,27 +94,17 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
-
-    .text {
-        padding: 6rem 1.5rem;
-    }
-
-    // code below makes sure that they overlap
-
-    .bg-img,
-    .text {
-        grid-area: 1/-1;
-    }
-
 }
 
 .create-plan-btn {
     @include variables.createBtn;
     width: 217px;
 }
+
 .collection {
     text-align: center;
     margin-bottom: 4rem;
+
     .h2 {
         // the after and the text overlap
         display: grid;
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     h2 {
         font-size: 1.75rem;
         font-weight: 900;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     h3 {
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .tablet {
-        display: block;
+        display: grid;
     }
 
     .header {
@@ -306,42 +306,49 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    .ad {
+    .hero {
+        // grid is being used to make sure that the bg and text overlap
+        display: grid;
         margin: 2.5rem 2.5rem 1rem;
-        background-image: url('/assets/home/tablet/image-hero-coffeepress.jpg');
-        background-size: cover;
         text-align: left;
-        padding: 6rem 3.5rem;
+
         .text {
+            padding: 5.5rem 3rem 0rem;
+            // clipping the size of the text div
             width: 70%;
         }
 
         h1 {
             font-size: 3rem;
+            line-height: 100%;
         }
+
         p {
             line-height: 160%;
         }
     }
 
+    // main div that has the h2 and coffee-selection-div
     .collection {
-        margin: 6rem 2.5rem;
+        margin: 6rem 3rem;
         margin-top: 4rem;
-        text-align: center;
-
-        .coffees {
+        // div that has the smaller divs - 4 of them with the coffee collection
+        .coffees-selection {
             padding: 0 3rem;
             text-align: left;
             margin-top: -3.5rem;
-            row-gap: 3rem;
+            row-gap: 1.75rem;
         }
+        // individual div that has info about the coffee
         .coffee {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: 2.25rem;
-            .text {
-                margin-top: 1rem;
-            }
+
+        }
+        
+        .text {
+            margin-top: 1rem;
         }
 
         h2 {
@@ -350,36 +357,39 @@ h1, h2, h3, h4, h5, h6 {
 
         p {
             margin: 1.5rem 0 0;
-            width: 95%;
-            line-height: 165%
+            line-height: 165%;
+            width: 100%;
         }
 
         img {
             margin-left: auto;
-            width: 80%;
+            width: 256px;
+            height: 193px;
         }
     }
 
-    .why-us {
+    // the main div
+    .benefits {
         margin: 0 2.5rem;
 
-        .benefits-listed {
+        .reasons {
             margin: 0 3.5rem;
             margin-top: 17rem;
             row-gap: 1.5rem;
         }
-        .best-quality,
-        .exclusive-benefits,
-        .free-shipping {
+        
+        .reason {
             text-align: left;
             display: grid;
             grid-template-columns: repeat(2, auto);
             column-gap: 3.438rem;
             padding: 1.6rem 3.5rem;
+
             p {
                 width: 100%;
             }
         }
+
         h2 {
             font-size: 2rem
         }
@@ -387,11 +397,11 @@ h1, h2, h3, h4, h5, h6 {
         h3 {
             margin-top: 0;
         }
+    }
 
-        p {
-            width: 75%;
-            margin: 0 auto;
-        }
+    .ad-text {
+        width: 79%;
+        margin: 0 auto;
     }
 
     .how {
