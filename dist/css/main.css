@@ -54,6 +54,7 @@
 
 .quality {
   display: grid;
+  margin: 0 1.5rem;
   margin-top: 10rem;
 }
 .quality .qa-text,
@@ -62,7 +63,7 @@
 }
 
 .coffee-img {
-  margin: -4.5rem 3rem 0;
+  margin: -4.5rem 1.5rem 0;
   z-index: 1;
 }
 .coffee-img img {
@@ -78,7 +79,6 @@
 }
 .qa-text .text {
   margin: 8rem 1.5rem 0;
-  padding: 0 1.5rem;
 }
 .qa-text .bg,
 .qa-text .text {
@@ -128,11 +128,12 @@
 
 @media screen and (min-width: 768px) {
   .about-us {
-    background: url("/assets/about/tablet/image-hero-whitecup.jpg");
     background-size: cover;
     text-align: left;
-    padding: 7.55rem 3rem;
     margin: 2.5rem 2.5rem 0;
+  }
+  .about-us .text {
+    padding: 6.25rem 3rem;
   }
   .about-us h1 {
     font-size: 2rem;
@@ -144,35 +145,30 @@
     margin: 6rem 2.5rem;
     text-align: left;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
+    grid-template-columns: auto 339px;
   }
   .commitment img {
-    width: 88%;
+    width: 281px;
   }
   .commitment .text {
     margin-top: 1rem;
   }
   .quality {
+    margin: 0 2.5rem;
     margin-top: 18rem;
   }
-  .quality .quality-coffee {
-    margin: -9.5rem 6rem 0;
+  .coffee-img {
+    margin: -10rem 3rem 0;
   }
-  .qa .text {
-    margin: 14rem 2.5rem 0;
-    padding: 0 4.8rem;
+  .qa-text .text {
+    margin: 15rem 4.75rem 0;
   }
-  .qa .bg {
-    margin: 0 2.5rem;
-  }
-  .qa h2 {
+  .qa-text h2 {
     font-size: 2rem;
   }
   .hq {
     text-align: left;
-    margin: 6rem 2.5rem 0;
+    margin: 8rem 2.5rem 0;
   }
   .hq h4 {
     font-size: 1.5rem;
@@ -181,6 +177,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 4.5rem;
+  }
+  .hq .au h4 {
+    margin-top: 3.4rem;
   }
 }
 .create-plan {
@@ -193,7 +192,8 @@
 .create-plan .text {
   padding: 6rem 1.5rem 9rem;
 }
-.create-plan .bg-img, .create-plan .text {
+.create-plan .bg-img,
+.create-plan .text {
   grid-area: 1/-1;
 }
 .create-plan img {
@@ -241,54 +241,30 @@
   font-size: 0.938rem;
 }
 
-.how-drink,
-.quantity,
-.type,
-.grind,
-.frequency {
+.selections {
   margin: 6rem 1.5rem;
 }
-.how-drink .heading,
-.quantity .heading,
-.type .heading,
-.grind .heading,
-.frequency .heading {
+.selections .heading {
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
   margin-bottom: 2rem;
 }
-.how-drink .heading img,
-.quantity .heading img,
-.type .heading img,
-.grind .heading img,
-.frequency .heading img {
+.selections .heading img {
   margin-left: auto;
 }
-.how-drink h4,
-.quantity h4,
-.type h4,
-.grind h4,
-.frequency h4 {
+.selections h4 {
   color: rgb(131, 136, 143);
   font-weight: 900;
   font-size: 1.5rem;
 }
-.how-drink h5,
-.quantity h5,
-.type h5,
-.grind h5,
-.frequency h5 {
+.selections h5 {
   font-size: 1.5rem;
   color: rgb(51, 61, 75);
   font-weight: 900;
   margin-bottom: 0.5rem;
 }
-.how-drink p,
-.quantity p,
-.type p,
-.grind p,
-.frequency p {
+.selections p {
   font-weight: 400;
   color: rgb(51, 61, 75);
   line-height: 160%;
@@ -386,16 +362,15 @@ input[type=radio] {
   margin-bottom: 2rem;
 }
 .order-summary .create-plan-btn {
-  margin: 0 auto;
-  box-sizing: border-box;
-  width: 86%;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .create-plan {
     margin: 2.5rem 2.5rem 8rem;
-    background-image: url("/assets/plan/tablet/image-hero-blackcup.jpg");
     text-align: left;
+  }
+  .create-plan .text {
     padding: 7rem 3rem;
   }
   .create-plan h1 {
@@ -417,46 +392,29 @@ input[type=radio] {
   .steps .step3 p {
     width: 85%;
   }
-  .how-drink,
-  .quantity,
-  .type,
-  .grind,
-  .frequency {
+  .selections {
     margin: 6rem 2.5rem;
   }
-  .how-drink h4,
-  .quantity h4,
-  .type h4,
-  .grind h4,
-  .frequency h4 {
+  .selections h4 {
     font-size: 2rem;
   }
-  .how-drink h5,
-  .quantity h5,
-  .type h5,
-  .grind h5,
-  .frequency h5 {
+  .selections h5 {
     margin-bottom: 1.5rem;
   }
-  .how-drink p,
-  .quantity p,
-  .type p,
-  .grind p,
-  .frequency p {
+  .selections p {
     width: 98%;
   }
-  .summary {
+  .summary-div .text {
     margin: 6rem 2.5rem 0;
-    padding: 1.5rem 3rem;
+    padding: 2rem 3rem;
   }
   .summary-div .create-plan-btn {
-    width: 30%;
     margin-left: auto;
     margin-right: auto;
   }
   .order-summary {
-    width: 70%;
-    margin: 3rem auto;
+    width: 70.4%;
+    margin: auto auto;
   }
   .order-summary .summary-header {
     padding: 2.75rem 3.5rem;
@@ -469,16 +427,15 @@ input[type=radio] {
   }
   .order-summary .checkout {
     display: grid;
-    margin: 0 3rem;
+    margin: 0 3rem 2rem;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 2rem;
   }
   .order-summary .checkout .total {
     color: rgb(51, 61, 75);
     font-size: 2rem;
     font-weight: 900;
     font-family: "Fraunces", serif;
-    align-content: center;
+    align-items: center;
   }
 }
 dialog::backdrop {
@@ -730,6 +687,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 160%;
   width: 95%;
 }
+.how .info {
+  display: grid;
+  row-gap: 2.5rem;
+}
 .how .step-number {
   color: rgb(253, 214, 186);
   font-size: 4.5rem;
@@ -893,6 +854,9 @@ h1, h2, h3, h4, h5, h6 {
   .benefits .reason p {
     width: 100%;
   }
+  .benefits .free-shipping h3 {
+    margin-top: 0;
+  }
   .benefits h2 {
     font-size: 2rem;
   }
@@ -908,9 +872,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 6rem 2.5rem 0;
     display: block;
   }
-  .how h2 {
-    margin: 0 0 2rem 0;
-  }
   .how .info {
     margin-top: 2rem;
     display: grid;
@@ -922,11 +883,11 @@ h1, h2, h3, h4, h5, h6 {
   .how .step1 p {
     width: 90%;
   }
-  .how .step3 p {
-    width: 90%;
+  .how h2 {
+    margin: 0 0 2rem 0;
   }
-  .how .create-plan-btn {
-    width: 31.6%;
+  .how .step3 p {
+    width: 85%;
   }
 }
 @media screen and (min-width: 1440px) {

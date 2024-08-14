@@ -258,6 +258,11 @@ h1, h2, h3, h4, h5, h6 {
             width: 95%;
         }
     }
+
+    .info {
+        display: grid;
+        row-gap: 2.5rem;
+    }
     
     .step-number {
         color: rgba(253, 214, 186, 1);
@@ -390,6 +395,10 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+        .free-shipping h3 {
+            margin-top: 0;
+        }
+
         h2 {
             font-size: 2rem
         }
@@ -409,14 +418,11 @@ h1, h2, h3, h4, h5, h6 {
         margin: 6rem 2.5rem 0;
         display: block;
 
-        h2 {
-            margin: 0 0 2rem 0;
-        }
         .info {
             margin-top: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            // column-gap: .75rem;
+
         }
 
         .step1 {
@@ -429,13 +435,14 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
-        .step3 p  {
-            width: 90%;
+        h2 {
+            margin: 0 0 2rem 0;
         }
 
-        .create-plan-btn {
-            width: 31.6%;
+        .step3 p  {
+            width: 85%;
         }
+
     }
 }
 

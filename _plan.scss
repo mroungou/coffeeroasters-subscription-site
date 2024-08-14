@@ -9,7 +9,8 @@
         padding: 6rem 1.5rem 9rem;
     }
     // makes sure that theyoverlap with text on top
-    .bg-img, .text {
+    .bg-img, 
+    .text {
         grid-area: 1/-1;
     }
 
@@ -63,11 +64,7 @@
     }
 }
 
-.how-drink, 
-.quantity, 
-.type, 
-.grind, 
-.frequency {
+.selections {
     margin: 6rem 1.5rem;
     .heading {
         display: grid;
@@ -130,6 +127,7 @@ input[type="radio"] {
     background-color: rgba(44, 52, 62, 1);
     color: rgba(255, 255, 255, 1);
     border-radius: 8px;
+
     #order-summary-header {
         text-transform: uppercase;
         font-size: 1rem;
@@ -137,6 +135,7 @@ input[type="radio"] {
         display: block;
         margin-bottom: .5rem;
     }
+
     p {
         font-family: "Fraunces", serif;
         font-size: 1.5rem;
@@ -174,6 +173,7 @@ input[type="radio"] {
         font-weight: 900;
     }
 
+    // the text updated by JS
     .summary-order {
         color: rgba(131, 136, 143, 1);
         font-size: 1.5rem;
@@ -183,7 +183,7 @@ input[type="radio"] {
         line-height: 180%;
         padding-bottom: 0;
     }
-
+    // the text below the text updated by JS
     .confirmation {
         padding-top: 0;
     }
@@ -204,9 +204,7 @@ input[type="radio"] {
     }
 
     .create-plan-btn {
-        margin: 0 auto;
-        box-sizing: border-box;
-        width: 86%;
+        margin: 0;
         // margin-bottom: 2rem;
     }
 }
@@ -214,9 +212,11 @@ input[type="radio"] {
 @media screen and (min-width: 768px) {
     .create-plan {
         margin: 2.5rem 2.5rem 8rem;
-        background-image: url('/assets/plan/tablet/image-hero-blackcup.jpg');
         text-align: left;
-        padding: 7rem 3rem;
+        
+        .text {
+            padding: 7rem 3rem;
+        }
 
         h1 {
             font-size: 3rem;
@@ -230,6 +230,7 @@ input[type="radio"] {
     .steps {
         text-align: left;
         padding: 5rem 2.5rem;
+        // div that contains the 2 steps
         .steps-info {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -242,11 +243,7 @@ input[type="radio"] {
         }
     }
 
-    .how-drink, 
-    .quantity, 
-    .type, 
-    .grind, 
-    .frequency {
+    .selections {
         margin: 6rem 2.5rem;
 
         h4 {
@@ -263,20 +260,20 @@ input[type="radio"] {
 
     }
 
-    .summary {
+    .summary-div .text{
         margin: 6rem 2.5rem 0;
-        padding: 1.5rem 3rem;
+        padding: 2rem 3rem;
     }
 
     .summary-div .create-plan-btn {
-        width: 30%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .order-summary {
-        width: 70%;
-        margin: 3rem auto;
+        width: 70.4%;
+        margin: auto auto;
+
         .summary-header {
             padding: 2.75rem 3.5rem;
         }
@@ -291,15 +288,14 @@ input[type="radio"] {
 
         .checkout {
             display: grid;
-            margin: 0 3rem;
+            margin: 0 3rem 2rem;
             grid-template-columns: repeat(2, 1fr);
-            margin-bottom: 2rem;
             .total {
                 color: rgba(51, 61, 75, 1);
                 font-size: 2rem;
                 font-weight: 900;
                 font-family: "Fraunces", serif;
-                align-content: center;
+                align-items: center;
             }
         }
     }

@@ -56,6 +56,7 @@
 
 .quality {
     display: grid;
+    margin: 0 1.5rem;
     margin-top: 10rem;
     // makes sure that the text and the img overlap
     .qa-text, 
@@ -66,7 +67,7 @@
 
 // styling for the img at the top of the quality card
 .coffee-img {
-    margin: -4.5rem 3rem 0;
+    margin: -4.5rem 1.5rem 0;
     z-index: 1;
     img {
         box-sizing: border-box;
@@ -85,7 +86,6 @@
     text-align: center;
     .text {
         margin: 8rem 1.5rem 0;
-        padding: 0 1.5rem;
     }
 
     .bg, 
@@ -99,6 +99,7 @@
         font-size: 1.75rem;
         margin-bottom: 1.5rem;
     }
+
     p {
         font-size: .938rem;
         line-height: 160%;
@@ -142,11 +143,13 @@
 
 @media screen and (min-width: 768px) {
     .about-us {
-        background: url("/assets/about/tablet/image-hero-whitecup.jpg");
         background-size: cover;
         text-align: left;
-        padding: 7.55rem 3rem;
         margin: 2.5rem 2.5rem 0;
+        // text that's in the image
+        .text {
+            padding: 6.25rem 3rem;
+        }
 
         h1 {
             font-size: 2rem;
@@ -156,35 +159,34 @@
             width: 70%;
         }
     }
-
+    // main div
     .commitment {
         margin: 6rem 2.5rem;
         text-align: left;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
+        grid-template-columns: auto 339px;
         img {
-            width: 88%;
+            width: 281px;
         }
         .text {
             margin-top: 1rem;
         }
+
     }
 
     .quality {
+        margin: 0 2.5rem;
         margin-top: 18rem;
-        .quality-coffee {
-            margin: -9.5rem 6rem 0;
-        }
     }
 
-    .qa {
+    .coffee-img {
+        margin: -10rem 3rem 0;
+    }
+
+    .qa-text {
+
         .text {
-            margin: 14rem 2.5rem 0;
-            padding: 0 4.8rem;
-        }
-        .bg {
-            margin: 0 2.5rem;
+            margin: 15rem 4.75rem 0;
         }
 
         h2 {
@@ -192,9 +194,11 @@
         }
     }
 
+
+
     .hq {
         text-align: left;
-        margin: 6rem 2.5rem 0;
+        margin: 8rem 2.5rem 0;
 
         h4 {
             font-size: 1.5rem;
@@ -204,6 +208,10 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin-top: 4.5rem;
+        }
+
+        .au h4 {
+            margin-top: 3.4rem;
         }
     }
 }
