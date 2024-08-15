@@ -408,7 +408,8 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    .ad-text {
+     // contains h2 and p
+     .ad-text {
         width: 79%;
         margin: 0 auto;
     }
@@ -417,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: left;
         margin: 6rem 2.5rem 0;
         display: block;
-
+        // contains the 3 smaller cards
         .info {
             margin-top: 2rem;
             display: grid;
@@ -459,33 +460,29 @@ h1, h2, h3, h4, h5, h6 {
         margin: 3rem 5rem;
     }
 
-    .ad {
+    .hero {
         margin: 0rem 5rem 1rem;
-        background-image: url('/assets/home/desktop/image-hero-coffeepress.jpg');
-        padding: 6.5rem 5rem;
+
         .text {
-            width: 45%;
+            padding: 6.5rem 5rem;
+            width: 51%;
         }
 
         h1 {
             font-size: 4.5rem;
-            line-height: 100%;
         }
 
         p {
             font-size: 1rem;
             width: 80%;
         }
-
-        .create-plan-btn {
-            width: 44%;
-        }
     }
 
+    // main div that has the h2 and coffee-selection-div
     .collection {
-        margin: 10rem 10rem;
-
-        .coffees {
+        margin: 10rem 10.25rem;
+    // div that has the smaller divs - 4 of them with the coffee collection
+        .coffees-selection {
             grid-template-columns: repeat(4, 1fr);
             padding: 0 2.5rem;
             text-align: center;
@@ -504,23 +501,22 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         img {
-            width: 90%;
+            width: 256px;
         }
     }
 
-    .why-us {
+    // main div
+    .benefits {
         margin: 0 5rem;
 
-        .benefits-listed {
+        .reasons {
             grid-template-columns: repeat(3, 1fr);
-            margin: 0 4.35rem;
-            margin-top: 28rem;
+            margin: 0 5.65rem;
+            margin-top: 23.5rem;
             column-gap: 1.5rem;
         }
 
-        .best-quality,
-        .exclusive-benefits,
-        .free-shipping {
+        .reason {
             grid-template-columns: repeat(1, auto);
             text-align: center;
             padding: 2.75rem 3rem 2rem;
@@ -531,21 +527,28 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+        .benefits-bg img{
+            height: 577px;
+        }
+
         .free-shipping {
+
             img {
                 margin-top: 2.5rem;
+
                 .text {
                     margin-top: 0;
                 }
             }
         }
+        
         h2 {
             font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         p {
             font-size: 1rem;
-            width: 43%;
         }
 
         .text {
@@ -553,27 +556,34 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+
+    // contains h2 and p of benefits section
     .ad-text {
-        padding: 6rem 1.5rem;
+        margin-top: 8rem;
+        padding: 0;
+        width: 41%;
     }
 
+
     .how {
-        margin: 8rem 9rem 0;
+        margin: 8rem 10.5rem 0;
 
         h2 {
-            margin: 0 0 5rem 0;
+            margin-bottom: 5rem;
         }
 
         .info {
             margin-top: 3rem;
+            // column-gap: 2rem;
         }
 
         .step {
             h3 {
-                font-size: 2rem
+                font-size: 2rem;
+                width: 65%;
             }
             p {
-                font-size: 1rem
+                font-size: 1rem;
             }
         }
     }

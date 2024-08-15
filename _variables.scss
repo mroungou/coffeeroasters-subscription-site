@@ -59,6 +59,26 @@
             margin: 1.25rem auto 0 ;
         }
     }
+
+    @media screen and (min-width: 1440px) {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin: 8rem 5rem 6rem;
+        padding: 2.875rem 6rem;
+
+        .social {
+            margin-top: 0;
+            margin-left: auto;
+            align-content: center;
+        }
+
+        .nav {
+            width: 70%;
+            align-items: center;
+            margin: 0 auto 0 0;
+            text-align: left;
+        }
+    }
 }
 
 @mixin checkedOptions {
