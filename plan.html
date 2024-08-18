@@ -85,161 +85,177 @@
             </div>
         </div>
     </section>
-    <!-- 01 Preferences
-    02 Bean type
-    03 Quantity
-    04 Grind option
-    05 Deliveries -->
-    <!-- start of option selection -->
-    <section class="how-drink selections">
-        <!-- contains h4 tag and the arrow to expand -->
-        <div class="heading">
-            <h4>How do you drink your coffee?</h4>
-            <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+    <!-- contains mini desktop nav and option selection -->
+    <section class="option-selection-desktop">
+        <div class="navigation desktop">
+            <div class="preferences mini-nav" onclick="expand('preferences-sel')">
+                <p><a href="#preferences-self"><span class="number">01</span>Preferences</a></p>
+            </div>
+            <div class="bean-type mini-nav" onclick="expand('bean-type-sel')">
+                <p><a href="#bean-type-sel"><span class="number">02</span>Bean type</a></p>
+            </div>
+            <div class="quantity mini-nav" onclick="expand('quantity-sel')">
+                <p><a href="#quantity-sel"><span class="number">03</span>Quantity</a></p>
+            </div>
+            <div class="grind-type mini-nav" id="grind-mini-nav" onclick="expand('grind')">
+               <p><a href="#grind"><span class="number">04</span>Grind Option</a><p>
+            </div>
+            <div class="deliveries mini-nav" onclick="expand('frequency-sel')">
+                <p><a href="#frequency-sel"><span class="number">05</span>Deliveries</a></p>
+            </div>
         </div>
-        <!-- contains the different options  -->
-        <div class="options">
-            <!-- radio button and text -->
-             <!-- label wraps around the the radio button and the input wraps the h5 and p -->
-              <!-- grid will be used to make sure that they all overlap and clickable -->
-            <label for="capsule" class="form-control">
-                <input type="radio" id="capsule" name="how" value="capsule">
-                    <h5>Capsule</h5>
-                    <p class="description">Compatible with Nespresso systems and similar brewers</p>
-                </input>
-            </label>
-            <label for="filter" class="form-control">
-                <input type="radio" id="filter" name="how" value="filter">
-                    <h5>Filter</h5>
-                    <p class="description">For pour over or drip methods like Aeropress, Chemex, and V60</p>
-                </input>
-            </label>
-            <label for="expresso" class="form-control">
-                <input type="radio" id="expresso" value="expresso" name="how">
-                    <h5>Espresso</h5>
-                    <p class="description">Dense and finely ground beans for an intense, flavorful experience</p>
-                </input>
-            </label>
+        <!-- start of option selection -->
+        <div class="option-selection">
+            <section class="how-drink selections" id="preferences-sel">
+                <!-- contains h4 tag and the arrow to expand -->
+                <div class="heading">
+                    <h4>How do you drink your coffee?</h4>
+                    <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                </div>
+                <!-- contains the different options  -->
+                <div class="options">
+                    <!-- radio button and text -->
+                     <!-- label wraps around the the radio button and the input wraps the h5 and p -->
+                      <!-- grid will be used to make sure that they all overlap and clickable -->
+                    <label for="capsule" class="form-control">
+                        <input type="radio" id="capsule" name="how" value="capsule">
+                            <h5>Capsule</h5>
+                            <p class="description">Compatible with Nespresso systems and similar brewers</p>
+                        </input>
+                    </label>
+                    <label for="filter" class="form-control">
+                        <input type="radio" id="filter" name="how" value="filter">
+                            <h5>Filter</h5>
+                            <p class="description">For pour over or drip methods like Aeropress, Chemex, and V60</p>
+                        </input>
+                    </label>
+                    <label for="expresso" class="form-control">
+                        <input type="radio" id="expresso" value="expresso" name="how">
+                            <h5>Espresso</h5>
+                            <p class="description">Dense and finely ground beans for an intense, flavorful experience</p>
+                        </input>
+                    </label>
+                </div>
+            </section>
+            <section class="type selections" id="bean-type-sel">
+                <div class="heading">
+                    <h4>What type of coffee?</h4>
+                    <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                </div>
+                <div class="options">
+                    <label for="single" class="form-control">
+                        <input type="radio" id="single" value="single" name="type">
+                            <h5>Single origin</h5>
+                            <p class="description">Distinct, high quality coffee from a specific family-owned farm</p>
+                        </input>
+                    </label>
+                    <label for="decaf" class="form-control">
+                        <input type="radio" id="decaf" value="decaf" name="type">
+                            <h5>Decaf</h5>
+                            <p class="decription">Just like regular coffee, except the caffeine has been removed</p>
+                        </input>
+                    </label>
+                    <label for="blended" class="form-control">
+                        <input type="radio" id="blended" value="blended" name="type">
+                            <h5>Blended</h5>
+                            <p class="description">Combination of two or three dark roasted beans of organic coffees</p>
+                        </input>
+                    </label>
+                </div>
+            </section>
+            <section class="quantity selections" id="quantity-sel">
+                <div class="heading">
+                    <h4>How much would you like?</h4>
+                    <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                </div>
+                <div class="options">
+                    <label for="250" class="form-control">
+                        <input type="radio" id="250" name="quantity" value="250">
+                            <h5>250g</h5>
+                            <p class="description">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+                        </input>
+                    </label>
+                    <label for="500" class="form-control">
+                        <input type="radio" id="500" value="500" name="quantity">
+                            <h5>500g</h5>
+                            <p class="description">Perfect option for a couple. Yields about 40 delectable cups.</p>
+                        </input>
+                    </label>
+                    <label for="1000" class="form-control">
+                        <input type="radio" id="1000" value="1000" name="quantity">
+                            <h5>1000g</h5>
+                            <p class="description">Perfect for offices and events. Yields about 90 delightful cups.</p>
+                        </input>
+                    </label>
+                </div>
+            </section>
+            <section class="grind selections" id="grind">
+                <div class="heading" >
+                    <h4>Want us to grind them?</h4>
+                    <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                </div>
+                <div class="options">
+                    <label for="wholebean" class="form-control">
+                        <input type="radio" id="wholebean" name="grind" value="wholebean">
+                            <h5>Wholebean</h5>
+                            <p class="description">Best choice if you cherish the full sensory experience</p>
+                        </input>
+                    </label>
+                    <label for="filter2" class="form-control">
+                        <input type="radio" id="filter2" value="filter" name="grind">
+                            <h5>Filter</h5>
+                            <p class="description">For drip or pour-over coffee methods such as V60 or Aeropress</p>
+                        </input>
+                    </label>
+                    <label for="cafetiére" class="form-control">
+                        <input type="radio" id="cafetiére" value="cafetiére" name="grind">
+                            <h5>Cafetiére</h5>
+                            <p class="description">Course ground beans specially suited for french press coffee</p>
+                        </input>
+                    </form>
+                </div>
+            </section>
+            <section class="frequency selections" id="frequency-sel">
+                <div class="heading">
+                    <h4>How often should we deliver?</h4>
+                    <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                </div>
+                <div class="options">
+                    <label for="week" class="form-control">
+                        <input type="radio" id="week" value="week" name="frequency">
+                            <h5>Every week</h5>
+                            <p class="description"><span class="price" id="week-price"></span> per shipment. Includes free first-class shipping.</p>
+                        </input>
+                    </label>
+                    <label for="2-weeks" class="form-control">
+                        <input type="radio" id="2-weeks" value="2 weeks" name="frequency">
+                            <h5>Every 2 weeks</h5>
+                            <p class="description"><span class="price" id="2-weeks-price"></span> per shipment. Includes free priority shipping.</p>
+                        </input>
+                    </label>
+                    <label for="month" class="form-control">
+                        <input type="radio" id="month" value="month" name="frequency">
+                            <h5>Every month</h5>
+                            <p class="description"><span class="price" id="month-price"></span> per shipment. Includes free priority shipping.</p>
+                        </input>
+                    </label>
+                </div>
+            </section>
+            <section class="summary-div">
+                <!-- contains the summary -->
+                <div class="text">
+                    <span id="order-summary-header">Order Summary</span>
+                    <!-- text will be dynamically updated by JS -->
+                    <p id="summary">
+                    </p>
+                </div>
+                <div class="create-plan-btn" onclick="openModal()" id="confirm-order">Create my plan!</div>
+            </section>
         </div>
     </section>
-    <section class="type selections">
-        <div class="heading">
-            <h4>What type of coffee?</h4>
-            <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
-        </div>
-        <div class="options">
-            <label for="single" class="form-control">
-                <input type="radio" id="single" value="single" name="type">
-                    <h5>Single origin</h5>
-                    <p class="description">Distinct, high quality coffee from a specific family-owned farm</p>
-                </input>
-            </label>
-            <label for="decaf" class="form-control">
-                <input type="radio" id="decaf" value="decaf" name="type">
-                    <h5>Decaf</h5>
-                    <p class="decription">Just like regular coffee, except the caffeine has been removed</p>
-                </input>
-            </label>
-            <label for="blended" class="form-control">
-                <input type="radio" id="blended" value="blended" name="type">
-                    <h5>Blended</h5>
-                    <p class="description">Combination of two or three dark roasted beans of organic coffees</p>
-                </input>
-            </label>
-        </div>
-    </section>
-    <section class="quantity selections">
-        <div class="heading">
-            <h4>How much would you like?</h4>
-            <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
-        </div>
-        <div class="options">
-            <label for="250" class="form-control">
-                <input type="radio" id="250" name="quantity" value="250">
-                    <h5>250g</h5>
-                    <p class="description">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
-                </input>
-            </label>
-            <label for="500" class="form-control">
-                <input type="radio" id="500" value="500" name="quantity">
-                    <h5>500g</h5>
-                    <p class="description">Perfect option for a couple. Yields about 40 delectable cups.</p>
-                </input>
-            </label>
-            <label for="1000" class="form-control">
-                <input type="radio" id="1000" value="1000" name="quantity">
-                    <h5>1000g</h5>
-                    <p class="description">Perfect for offices and events. Yields about 90 delightful cups.</p>
-                </input>
-            </label>
-        </div>
-    </section>
-    <section class="grind selections" id="grind">
-        <div class="heading" >
-            <h4>Want us to grind them?</h4>
-            <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
-        </div>
-        <div class="options">
-            <label for="wholebean" class="form-control">
-                <input type="radio" id="wholebean" name="grind" value="wholebean">
-                    <h5>Wholebean</h5>
-                    <p class="description">Best choice if you cherish the full sensory experience</p>
-                </input>
-            </label>
-            <label for="filter2" class="form-control">
-                <input type="radio" id="filter2" value="filter" name="grind">
-                    <h5>Filter</h5>
-                    <p class="description">For drip or pour-over coffee methods such as V60 or Aeropress</p>
-                </input>
-            </label>
-            <label for="cafetiére" class="form-control">
-                <input type="radio" id="cafetiére" value="cafetiére" name="grind">
-                    <h5>Cafetiére</h5>
-                    <p class="description">Course ground beans specially suited for french press coffee</p>
-                </input>
-            </form>
-        </div>
-    </section>
-    <section class="frequency selections">
-        <div class="heading">
-            <h4>How often should we deliver?</h4>
-            <img class="expand" src="./assets/plan/desktop/icon-arrow.svg" alt="">
-        </div>
-        <div class="options">
-            <label for="week" class="form-control">
-                <input type="radio" id="week" value="week" name="frequency">
-                    <h5>Every week</h5>
-                    <p class="description"><span class="price" id="week-price"></span> per shipment. Includes free first-class shipping.</p>
-                </input>
-            </label>
-            <label for="2-weeks" class="form-control">
-                <input type="radio" id="2-weeks" value="2 weeks" name="frequency">
-                    <h5>Every 2 weeks</h5>
-                    <p class="description"><span class="price" id="2-weeks-price"></span> per shipment. Includes free priority shipping.</p>
-                </input>
-            </label>
-            <label for="month" class="form-control">
-                <input type="radio" id="month" value="month" name="frequency">
-                    <h5>Every month</h5>
-                    <p class="description"><span class="price" id="month-price"></span> per shipment. Includes free priority shipping.</p>
-                </input>
-            </label>
-        </div>
-    </section>
-    <!-- main div -->
-     <!-- order summary at the bottom of the page after selecting all options and
-      before clicking create my plan -->
-    <section class="summary-div">
-        <!-- contains the summary -->
-        <div class="text">
-            <span id="order-summary-header">Order Summary</span>
-            <!-- text will be dynamically updated by JS -->
-            <p id="summary">
-
-            </p>
-        </div>
-        <div class="create-plan-btn" onclick="openModal()" id="confirm-order">Create my plan!</div>
-    </section>
+        <!-- main div -->
+         <!-- order summary at the bottom of the page after selecting all options and
+          before clicking create my plan -->
     <!-- Modal -->
     <dialog class="order-summary" id="order-summary">
         <div class="summary-header"><h6>Order Summary</h6></div>

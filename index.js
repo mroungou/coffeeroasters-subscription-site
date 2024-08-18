@@ -7,6 +7,8 @@ const grindDiv = document.getElementById('grind');
 const options = document.querySelectorAll('input[type="radio"]');
 const selectOptions = document.getElementsByClassName('heading');
 
+const miniNav = document.getElementsByClassName('mini-nav');
+
 const coffee = document.getElementsByName('how');
 const type = document.getElementsByName('type');
 const quantity = document.getElementsByName('quantity');
@@ -69,7 +71,7 @@ function updatePrice(quantitySelected, freq) {
         'month': selectedPrice.month
     };
 
-    document.getElementById('amt-total').innerText = `- ${dollars.format(monthlyPrices[freq])} / month`;
+    document.getElementById('amt-total').innerText = `- ${dollars.format(monthlyPrices[freq])} / mo`;
     document.getElementById('total').innerText = `${dollars.format(monthlyPrices[freq])} / mo`
 }
 
@@ -122,6 +124,24 @@ for (const heading of selectOptions) {
             heading.parentElement.classList.toggle('hiddenToggle');
         } 
     })
+}
+
+
+
+const expand = (element) => {
+   document.getElementById(element).classList.toggle('hiddenToggle');
+
+   const grindMiniNav = document.getElementById('grind-mini-nav');
+   
+   for (let i = 0; i < miniNav.length; i++) {
+       miniNav[i].addEventListener('click', () => {
+           miniNav[i].classList.add('selected');
+        })
+        
+        miniNav[i].classList.remove('selected');
+        
+    }
+    
 }
 
 function closeDialog(event) {

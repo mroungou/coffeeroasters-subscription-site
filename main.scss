@@ -99,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
 .create-plan-btn {
     @include variables.createBtn;
     width: 217px;
+    // hover effects
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(102, 210, 207, 1);
+    }
 }
 
 .collection {
@@ -274,10 +279,6 @@ h1, h2, h3, h4, h5, h6 {
         width: 96%;
     }
 
-
-    .create-plan-btn {
-        @include variables.createBtn;
-    }
 }
 
 .footer {
@@ -307,7 +308,11 @@ h1, h2, h3, h4, h5, h6 {
             text-decoration: none;
             font-size: .75rem;
             font-weight: 700;
-            letter-spacing: .92px
+            letter-spacing: .92px;
+            &:hover {
+                color: rgba(51, 61, 75, 1);
+                cursor: pointer;
+            }
         }
     }
 
@@ -599,4 +604,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .disabled {
     @include variables.disabledOptions;
+}
+
+.disabledText {
+    color: rgba(213, 213, 212, 1) !important;
 }

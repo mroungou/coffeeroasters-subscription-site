@@ -18,6 +18,7 @@
         margin: 2rem 0;
         // width: 55%;
     }
+
 }
 
 @mixin footerDesign {
@@ -37,6 +38,11 @@
             font-weight: 700;
             letter-spacing: .92px;
             font-size: .75rem;
+
+            &:hover {
+                cursor: pointer;
+                color: rgba(254, 252, 247, 1);
+            }
         }
     }
 
@@ -47,6 +53,9 @@
             display: inline-block;
             margin-left: .35rem;
             margin-right: .35rem;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -105,7 +114,12 @@
         .options {
             grid-template-columns: repeat(3, 1fr);
             column-gap: .625rem;
+        }
+    }
 
+    @media screen and (min-width: 1440px) {
+        .options {
+            column-gap: 1.5rem;
         }
     }
 }
