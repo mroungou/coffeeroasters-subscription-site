@@ -8,6 +8,9 @@ const options = document.querySelectorAll('input[type="radio"]');
 const selectOptions = document.getElementsByClassName('heading');
 
 const miniNav = document.getElementsByClassName('mini-nav');
+const  grindMiniNav = document.getElementById('grind-mini-nav');
+
+const confirmOrderBtn = document.getElementById('confirm-order');
 
 const coffee = document.getElementsByName('how');
 const type = document.getElementsByName('type');
@@ -30,9 +33,9 @@ function updateSummary () {
     updatePrice(resultQuantity, resultFrequency)
 
     const summaryTemplate = `
-     “I drink coffee ${coffee[0].checked ? 'using' : 'as' } <span class="opt-tkn">${resultCoffee}</span>,
+     “I drink coffee ${resultCoffee === 'capsule' ? 'using' : 'as' } <span class="opt-tkn">${resultCoffee}</span>,
                 with a <span class="opt-tkn" id="type">${resultType}</span> type of bean.
-                <span class="opt-tkn" id="quantity">${resultQuantity}g</span> ${!coffee[0].checked ? 'ground ala' : ''}
+                <span class="opt-tkn" id="quantity">${resultQuantity}g</span> ${resultCoffee !== 'capsule' ? 'ground ala' : ''}
                 <span class="opt-tkn" id="grind">${resultGrind}</span>,
                 sent to me <span class="opt-tkn" id="frequency">every ${resultFrequency}</span>.”
     
@@ -41,6 +44,7 @@ function updateSummary () {
 
     document.getElementById('summary').innerHTML = summaryTemplate;
     document.getElementById('summary-modal').innerHTML = summaryTemplate;
+
 }
 
 function updatePrice(quantitySelected, freq) {
@@ -115,7 +119,7 @@ function updateOption() {
         }
     }
 
-    updateSummary()
+    updateSummary();
 }
 
 for (const heading of selectOptions) {
@@ -130,8 +134,6 @@ for (const heading of selectOptions) {
 
 const expand = (element) => {
    document.getElementById(element).classList.toggle('hiddenToggle');
-
-   const grindMiniNav = document.getElementById('grind-mini-nav');
    
    for (let i = 0; i < miniNav.length; i++) {
        miniNav[i].addEventListener('click', () => {
@@ -168,3 +170,17 @@ const closeNav = () => {
     openMenuBtn.style.display = 'block';
     closeBtn.style.display = 'none';
 }
+
+const optionsChecked = () => {
+    for (const option of options) {
+        if (!option.checked) {
+            confirmOrderBtn.classList.add('disableBTN')
+        } else {
+            confirmOrderBtn.classList.remove('disableBTN');
+        }
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    // optionsChecked()
+})

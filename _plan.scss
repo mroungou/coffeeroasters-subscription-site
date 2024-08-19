@@ -106,7 +106,7 @@
 // label wraps around the radio button and the input wraps the h5 and p
 .form-control {
     background-color: rgba(244, 241, 235, 1);
-    padding: 1.65rem 1.5rem;
+    padding: 1.65rem 2rem;
     border-radius: 8px;
     // grid is used so the the text and the input are 1 and when clicked the radio is checked
     display: grid;
@@ -149,6 +149,7 @@ input[type="radio"] {
         text-transform: capitalize;
     }
 }
+
 
 
 .order-summary {
@@ -202,6 +203,11 @@ input[type="radio"] {
 
     .checkout {
         margin-bottom: 2rem;
+        .create-plan-btn {
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;
+            width: auto;
+        }
     }
     
     .create-plan-btn {
@@ -293,6 +299,12 @@ input[type="radio"] {
             display: grid;
             margin: 0 3rem 2rem;
             grid-template-columns: repeat(2, 1fr);
+
+            .create-plan-btn {
+                margin-right: 0;
+                margin-left: 0;
+                width: 217px;
+            }
             .total {
                 color: rgba(51, 61, 75, 1);
                 font-size: 2rem;
